@@ -9,4 +9,5 @@ def index(request):
     return render(request, 'index.html', {'people': people})
 
 def research(request):
-    return render(request, 'research.html')
+	people = Person.objects.all()
+    return render(request, 'research.html', {'people': people})
