@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [ 
     url(r'^$', views.index),
-	url(r'^research/$', views.research),	
+	url(r'^research/$', views.research),
+	url(r'^publications/$', views.publications),
 ]

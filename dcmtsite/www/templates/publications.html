@@ -1,0 +1,25 @@
+﻿{% extends 'base.html' %}
+
+{% block breadcrumbs %}
+<p><a href='/'>Главная</a> -> <a href='/publications'>Публикации</a></p>       
+{% endblock %}
+		
+{% block content%}
+<h3>Публикации сотрудников ОВМиТ</h3>
+<h4>Статьи</h4>
+<p>
+<ol>
+{% for paper in articles %}
+  <li>{{ paper }}</li>  
+{% endfor %}
+</ol>
+</p>
+<h4>Труды конференций</h4>
+<p>
+<ol>
+{% for paper in conf_proc %}
+  <li>{{ paper }}</li>  
+{% endfor %}
+</ol>
+</p>
+{% endblock %}
