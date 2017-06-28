@@ -17,7 +17,7 @@ def publications(request):
     people = Person.objects.all()
     year_oldest = 2000
     year_cur = date.today().year
-    years = range(year_oldest, year_cur)
+    years = range(year_oldest, year_cur+1)
     articles = Paper.objects.filter(type='ART')
     conf_procs = Paper.objects.filter(type='CPR')
     monos = Paper.objects.filter(type='MNG')
