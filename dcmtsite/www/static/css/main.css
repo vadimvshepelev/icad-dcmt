@@ -6,3 +6,12 @@
 .header {
 	background-color: #eee;
 }
+
+.dash {
+    text-decoration: none; /* Убираем подчеркивание */
+    border-bottom: 1px dashed; /* Добавляем свою линию */ 
+}
+
+.dash:hover {
+    text-decoration: none; /* Убираем подчеркивание */
+   }

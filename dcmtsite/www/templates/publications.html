@@ -5,21 +5,65 @@
 {% endblock %}
 		
 {% block content%}
-<h3>Публикации сотрудников ОВМиТ</h3>
-<h4>Статьи</h4>
-<p>
-<ol>
-{% for paper in articles %}
-  <li>{{ paper }}</li>  
-{% endfor %}
-</ol>
-</p>
-<h4>Труды конференций</h4>
-<p>
-<ol>
-{% for paper in conf_proc %}
-  <li>{{ paper }}</li>  
-{% endfor %}
-</ol>
-</p>
+<h3>Публикации отдела</h3>
+{% if years %}
+  <p><small>
+  {% for year in years %}
+  <a href='/publications'>{{year}}</a>&nbsp; 
+  {% endfor %}
+  </small></p>
+{% endif %}
+<p><small>
+  {% if articles %} <a class='dash' href='#articles'>Статьи</a>&emsp; {% endif %}  
+  {% if conf_procs %}  <a class='dash' href='#conf_procs'>Труды конференций</a>&emsp; {% endif %}  
+  {% if monos %} <a class='dash' href='#monos'>Монографии</a>&emsp; {% endif %}  
+  {% if preprints %} <a class='dash' href='#preprints'>Препринты</a>&emsp; {% endif %}  
+  {% if other %} <a class='dash' href='#other'>Другое</a> {% endif %}  
+</small></p>
+
+{% if articles %}
+  <h4><a name="articles"></a>Статьи</h4>
+  <p><ol>
+  {% for paper in articles %}
+    <li>{{ paper }}</li>  
+  {% endfor %}
+  </ol></p>
+{% endif %}  
+
+{% if conf_procs %}
+  <h4><a name="conf_procs"></a>Труды конференций</h4>
+  <p><ol>
+  {% for paper in conf_procs %}
+    <li>{{ paper }}</li>  
+  {% endfor %}
+  </ol></p>
+{% endif %}  
+
+{% if monos %}
+  <h4><a name="monos"></a>Монографии</h4>
+  <p><ol>
+  {% for paper in monos %}
+    <li>{{ paper }}</li>  
+  {% endfor %}
+  </ol></p>
+{% endif %}
+
+{% if preprints %}
+  <h4><a name="preprints"></a>Препринты</h4>
+  <p><ol>
+  {% for paper in preprints %}
+    <li>{{ paper }}</li>  
+  {% endfor %}
+  </ol></p>
+{% endif %}
+
+{% if other %}
+  <h4><a name="other"></a>Другое</h4>
+  <p><ol>
+  {% for paper in other %}
+    <li>{{ paper }}</li>  
+  {% endfor %}
+  </ol></p>
+{% endif %}
+
 {% endblock %}
