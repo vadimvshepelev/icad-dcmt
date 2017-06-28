@@ -5,4 +5,7 @@ urlpatterns = [
     url(r'^$', views.index),
 	url(r'^research/$', views.research),
 	url(r'^publications/$', views.publications),
+	url(r'^conferences/$', views.conferences),
+	url(r'^grants/$', views.grants),
+	url(r'^contacts/$', views.contacts),
 ]

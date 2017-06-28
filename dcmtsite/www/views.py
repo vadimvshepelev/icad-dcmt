@@ -32,6 +32,18 @@ def publications(request):
                'other': other}
     return render(request, 'publications.html', context)
 
+def conferences(request):
+    people = Person.objects.all()
+    return render(request, 'conferences.html', {'people': people})	
+	
+def grants(request):
+    people = Person.objects.all()
+    return render(request, 'grants.html', {'people': people})
+
+def contacts(request):
+    people = Person.objects.all()
+    return render(request, 'contacts.html', {'people': people})
+
 
 
 
