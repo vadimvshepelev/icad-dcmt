@@ -10,9 +10,10 @@ class Person(models.Model):
     position = models.CharField(max_length=40)
     email = models.CharField(max_length=40)
     photo = models.CharField(max_length=256)
+    slug = models.SlugField()
 	
     def __str__(self):
-        return self.name[0] + '.' + self.patronymic[0] + '. ' + self.family_name
+        return self.family_name + ' ' + self.name[0] + '.' + self.patronymic[0] + '. ' 
 	
 class Paper(models.Model):
 	ARTICLE = 'ART'

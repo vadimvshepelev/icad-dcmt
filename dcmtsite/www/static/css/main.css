@@ -15,3 +15,10 @@
 .dash:hover {
     text-decoration: none; /* Убираем подчеркивание */
    }
+   
+img {
+	padding: 3px; /* Ширина паспарту */
+    background: #ddd;
+	/*border: 1px solid #777;*/
+	border-radius: 5px;	
+}
