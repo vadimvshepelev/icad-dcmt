@@ -32,6 +32,10 @@ def publications(request):
                'other': other}
     return render(request, 'publications.html', context)
 
+def scientists(request):
+    people = Person.objects.all().order_by('family_name')
+    return render(request, 'scientists.html', {'people': people})		
+	
 def conferences(request):
     people = Person.objects.all().order_by('family_name')
     return render(request, 'conferences.html', {'people': people})	
