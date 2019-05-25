@@ -16,32 +16,41 @@ class Person(models.Model):
         return self.family_name + ' ' + self.name[0] + '.' + self.patronymic[0] + '. ' 
 	
 class Paper(models.Model):
-	ARTICLE = 'ART'
-	CONF_PROC = 'CPR'
-	MONOGRAPHY = 'MNG'
-	PREPRINT = 'PPR'
-	OTHER = 'OTH'
-	TYPE_CHOICES = (
-	    (ARTICLE, 'article'),
-	    (CONF_PROC, 'conference proceeding'),
-		(MONOGRAPHY, 'monography'),
-		(PREPRINT, 'preprint'),
-		(OTHER, 'other')
-	)
-	
-	title = models.CharField(max_length=256)
-	dcmt_author_1 = models.CharField(max_length=40)
-	dcmt_author_2 = models.CharField(max_length=40, blank=True)
-	dcmt_author_3 = models.CharField(max_length=40, blank=True)
-	dcmt_author_4 = models.CharField(max_length=40, blank=True)
-	dcmt_author_5 = models.CharField(max_length=40, blank=True)
-	dcmt_author_6 = models.CharField(max_length=40, blank=True)
-	dcmt_author_7 = models.CharField(max_length=40, blank=True)
-	dcmt_author_8 = models.CharField(max_length=40, blank=True)
-	year = models.IntegerField()
-	link = models.CharField(max_length=256, blank=True)
-	type = models.CharField(max_length=3, choices = TYPE_CHOICES, default = ARTICLE)
+    authors = models.CharField(max_length=256) 
+    title = models.CharField(max_length=256)
+    journal = models.CharField(max_length=256)
+    # Зачем это? Это способ не дублировать статьи у разных авторов из отдела, чтобы вносились сразу все.
+    # Не пороть горячку, подумать, как это лучше реализовать.
+	#dcmt_author_1 = models.CharField(max_length=40)
+	#dcmt_author_2 = models.CharField(max_length=40, blank=True)
+	#dcmt_author_3 = models.CharField(max_length=40, blank=True)
+	#dcmt_author_4 = models.CharField(max_length=40, blank=True)
+	#dcmt_author_5 = models.CharField(max_length=40, blank=True)
+	#dcmt_author_6 = models.CharField(max_length=40, blank=True)
+	#dcmt_author_7 = models.CharField(max_length=40, blank=True)
+	#dcmt_author_8 = models.CharField(max_length=40, blank=True)    
+    year = models.IntegerField()
+    abs_link = models.CharField(max_length=256, blank=True)
+    rinc_link = models.CharField(max_length=256, blank=True)
+    scopus_link = models.CharField(max_length=256, blank=True)
+    wos_link = models.CharField(max_length=256, blank=True)
+    download_link = models.CharField(max_length=256, blank=True)
+    ARTICLE = 'ART'
+    CONF_PROC = 'CPR'
+    MONOGRAPHY = 'MNG'
+    PREPRINT = 'PPR'
+    OTHER = 'OTH'
+    TYPE_CHOICES = (
+        (ARTICLE, 'article'),
+        (CONF_PROC, 'conference proceeding'),
+        (MONOGRAPHY, 'monography'),
+         (PREPRINT, 'preprint'),
+        (OTHER, 'other')
+    )
+    type = models.CharField(max_length=3, choices = TYPE_CHOICES, default = ARTICLE)
     
-	def __str__(self):
-	    return self.title
+    def __str__(self):
+        words_list = self.title.split()[:3]
+        str = ' '.join(word_list)
+        return str
 	
