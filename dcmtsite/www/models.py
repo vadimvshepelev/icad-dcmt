@@ -51,6 +51,6 @@ class Paper(models.Model):
     
     def __str__(self):
         words_list = self.title.split()[:3]
-        str = ' '.join(word_list)
+        str = ' '.join(words_list)
         return str
 	
