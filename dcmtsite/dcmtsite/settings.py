@@ -25,7 +25,7 @@ SECRET_KEY = 'q%x)*l#7bcia52(-07i37(^qp*r@_kr*=4!&#p=_#-%@+fh0lv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','icad-dcmt.herokuapp.com',]
+ALLOWED_HOSTS = ['127.0.0.1','icad-dcmt.herokuapp.com','icad-dcmt.ru', 'icad-dcmt.arietsu.lclients.ru']
 
 
 # Application definition
