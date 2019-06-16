@@ -49,7 +49,7 @@ def contacts(request):
     return render(request, 'contacts.html', {'people': people})
 
 def robots_txt(request):
-	return render(request, 'robots.txt')	
+	return render(request, 'robots.txt', content_type='text/plain')	
 	
 # Hardcoded for the prototype 
 # TODO: parametric links with 'slug' parameter
