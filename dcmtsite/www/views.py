@@ -48,7 +48,8 @@ def contacts(request):
     people = Person.objects.all().order_by('family_name')
     return render(request, 'contacts.html', {'people': people})
 
-	
+def robots_txt(request):
+	return render(request, 'robots.txt')	
 	
 # Hardcoded for the prototype 
 # TODO: parametric links with 'slug' parameter
