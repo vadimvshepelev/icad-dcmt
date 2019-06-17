@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Person, Paper
 from datetime import date
 
-# Create your views here.
+# Create your views here
 
 def index(request):
     people = Person.objects.all().order_by('family_name')
