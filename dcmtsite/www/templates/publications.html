@@ -23,11 +23,11 @@
 
 {% if articles %}
   <h4><a name="articles"></a>Статьи</h4>
-  <p><ol>
+  <ol>
   {% for paper in articles %}
     <li>{{ paper }}</li>  
   {% endfor %}
-  </ol></p>
+  </ol>
 {% endif %}  
 
 {% if conf_procs %}
