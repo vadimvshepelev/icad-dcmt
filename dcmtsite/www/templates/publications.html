@@ -32,38 +32,38 @@
 
 {% if conf_procs %}
   <h4><a name="conf_procs"></a>Труды конференций</h4>
-  <p><ol>
+  <ol>
   {% for paper in conf_procs %}
     <li>{{ paper }}</li>  
   {% endfor %}
-  </ol></p>
+  </ol>
 {% endif %}  
 
 {% if monos %}
   <h4><a name="monos"></a>Монографии</h4>
-  <p><ol>
+  <ol>
   {% for paper in monos %}
     <li>{{ paper }}</li>  
   {% endfor %}
-  </ol></p>
+  </ol>
 {% endif %}
 
 {% if preprints %}
   <h4><a name="preprints"></a>Препринты</h4>
-  <p><ol>
+  <ol>
   {% for paper in preprints %}
     <li>{{ paper }}</li>  
   {% endfor %}
-  </ol></p>
+  </ol>
 {% endif %}
 
 {% if other %}
   <h4><a name="other"></a>Другое</h4>
-  <p><ol>
+  <ol>
   {% for paper in other %}
     <li>{{ paper }}</li>  
   {% endfor %}
-  </ol></p>
+  </ol>
 {% endif %}
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 {% endblock %}
