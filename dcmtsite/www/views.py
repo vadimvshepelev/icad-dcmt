@@ -61,7 +61,7 @@ def shepelev(request):
     people = Person.objects.all().order_by('family_name')
     return render(request, 'shepelev.html', {'people': people})
 	
-def researcher_card(request, researcher_slug):
+def researcher(request, researcher_slug):
 	researcher = Person.objects.get(slug=researcher_slug)
 #	name = researcher.name
 #	patronymic = researcher.patronymic
