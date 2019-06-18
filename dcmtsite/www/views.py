@@ -60,7 +60,20 @@ def fortova(request):
 def shepelev(request):
     people = Person.objects.all().order_by('family_name')
     return render(request, 'shepelev.html', {'people': people})
-
+	
+def scientist_card(request, researcher_slug):
+	researcher = Person.objects.get(slug=researcher_slug)
+#	name = researcher.name
+#	patronymic = researcher.patronymic
+#	family_name = researcher.family_name
+#	position = researcher.position;
+#	degree = researcher.degree;
+#	email = researcher.email; 
+#	papers = Paper.objects.filter(authors__contains==scientist.family_name)
+	context = {'researcher_slug': researcher_slug, 
+			   'researcher': researcher, 
+			   }
+	return render(request, 'researcher_card.html', context)
 	
 	
 	
