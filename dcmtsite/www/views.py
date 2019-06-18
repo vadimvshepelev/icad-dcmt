@@ -71,8 +71,7 @@ def researcher(request, researcher_slug):
 #	email = researcher.email; 
 #	papers = Paper.objects.filter(authors__contains==scientist.family_name)
 	context = {'researcher_slug': researcher_slug, 
-			   'researcher': researcher, 
-			   }
+			   'researcher': researcher, }
 	return render(request, 'researcher_card.html', context)
 	
 	
