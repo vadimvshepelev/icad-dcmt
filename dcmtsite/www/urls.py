@@ -10,8 +10,8 @@ urlpatterns = [
 	url(r'^contacts/$', views.contacts),
 	url(r'^scientists/$', views.scientists),
 	url(r'^scientists/fortova$', views.fortova),
-	url(r'^scientists/shepelev1$', views.shepelev),
-	url(r'^scientists/?P<slug>[a-z]$', views.researcher(researcher_slug=slug)), 
+	url(r'^scientists/shepelev$', views.shepelev),
+	url(r'^scientists/?P<slug>[a-z]$', views.researcher), 
 #	url(r'^scientists/shepelev$', views.researcher(slug='shepelev'),
 	url(r'^robots.txt$', views.robots_txt),
 ]
