@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-{% researcher %} - Сотрудники - ОВМиТ ИАП РАН
+{{ researcher }} - Сотрудники - ОВМиТ ИАП РАН
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -9,16 +9,16 @@
 {% endblock %}
 
 {% block content %}
-<h3>{% researcher.name %} {% researcher.patronymic %} {%researcher.family_name%}</h3>
+<h3>{{ researcher.name }} {{ researcher.patronymic }} {{ researcher.family_name }}</h3>
 <div class='row'>
   <div class='col-md-3'>
     <img src='https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/2/000/24c/152/0c2b9dc.jpg' alt='В.В. Шепелев' width='100'></img>
   </div>
   <div class='col-md-9'>
      <br>
-     <p>Должность: {% researcher.position %}</p>
-	 <p>Ученая степень: {% researcher.degree %}</p>
-	 <p>E-mail: {% researcher.email %}</p>
+     <p>Должность: {{ researcher.position }}</p>
+	 <p>Ученая степень: {{ researcher.degree }}</p>
+	 <p>E-mail: {{ researcher.email }}</p>
   </div>
   <div class='clearfix'></div>
 </div>
@@ -26,8 +26,8 @@
 <h4>Публикации</h4>
 <ol>
  {% for paper in papers %}
-<li> {% paper.authors %}, {% paper.title %}, {% paper.journal %}, {% paper.year %} </li> 
- {% endblock %}
+<li> {{ paper.authors }}, {{ paper.title }}, {{ paper.journal }}, {{ paper.year }} </li> 
+ {% endfor %}
  
   <!--<li>S.V. Fortova, P.S. Utkin and V.V. Shepelev, Application of software complex Turbo Problem Solver
   to Rayleigh-Taylor instability modeling, Journal of Physics: Conference Series, Volume 754, Number 1 (2016).</li>

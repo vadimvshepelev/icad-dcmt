@@ -62,17 +62,11 @@ def shepelev(request):
     return render(request, 'shepelev.html', {'people': people})
 	
 def researcher(request, researcher_slug):
-	researcher = Person.objects.get(slug=researcher_slug)
-#	name = researcher.name
-#	patronymic = researcher.patronymic
-#	family_name = researcher.family_name
-#	position = researcher.position;
-#	degree = researcher.degree;
-#	email = researcher.email; 
-#	papers = Paper.objects.filter(authors__contains==scientist.family_name)
-	context = {'researcher_slug': researcher_slug, 
-			   'researcher': researcher, }
-	return render(request, 'researcher_card.html', context)
+    researcher = Person.objects.get(slug=researcher_slug)
+    # papers = Paper.objects.filter(authors__contains==scientist.family_name)
+    papers = Paper.objects.all()
+    context = {'researcher_slug': researcher_slug, 'researcher': researcher, 'papers': papers }
+    return render(request, 'researcher_card.html', context)
 	
 	
 	
