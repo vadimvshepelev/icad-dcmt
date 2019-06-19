@@ -69,7 +69,7 @@ def researcher(request, researcher_slug):
 #	position = researcher.position;
 #	degree = researcher.degree;
 #	email = researcher.email; 
-#	papers = Paper.objects.filter(authors__contains==scientist.family_name)
+	papers = Paper.objects.filter(authors__contains==scientist.family_name)
 	context = {'researcher_slug': researcher_slug, 
 			   'researcher': researcher, }
 	return render(request, 'researcher_card.html', context)
