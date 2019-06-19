@@ -11,19 +11,8 @@
 {% block content %}
 <h3>Сотрудники отдела</h3>
 <ul>
-<!-- Hardcoded -->
-<li><a href='/scientists/'>Марина Сергеевна Белоцерковская</a></li>
-<li><a href='/scientists/'>Владимир Андроникович Денисенко</a></li>
-<li><a href='/scientists/'>Илья Аристархович Ериклинцев</a></li>
-<li><a href='/scientists/'>Сергей Святополкович Козлов</a></li>
-<li><a href='/scientists/'>Александр Игоревич Лопато</a></li>
-<li><a href='/scientists/'>Елена Ивановна Опарина</a></li>
-<li><a href='/scientists/'>Илья Витальевич Семенов</a></li>
-<li><a href='/scientists/'>Олег Валентинович Трошкин</a></li>
-<li><a href='/scientists/'>Павел Сергеевич Уткин</a></li>
-<!--------------->
 {% for p in people%}
-<li><a href='/scientists/{{ p.slug }}'>{{ p.name }} {{ p.patronymic }} {{ p.family_name }}</a> (рабочая ссылка)</li>
+<li><a href='/scientists/{{ p.slug }}'>{{ p.name }} {{ p.patronymic }} {{ p.family_name }}</a></li>
 {% endfor %}
 </ul>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
