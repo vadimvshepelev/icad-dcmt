@@ -19,9 +19,7 @@ class Paper(models.Model):
     authors = models.CharField(max_length=256) 
     title = models.CharField(max_length=256)
     journal = models.CharField(max_length=256)
-    # Зачем это? Это способ не дублировать статьи у разных авторов из отдела, чтобы вносились сразу все.
-    # Не пороть горячку, подумать, как это лучше реализовать.
-	#dcmt_author_1 = models.CharField(max_length=40)
+ 	#dcmt_author_1 = models.CharField(max_length=40)
 	#dcmt_author_2 = models.CharField(max_length=40, blank=True)
 	#dcmt_author_3 = models.CharField(max_length=40, blank=True)
 	#dcmt_author_4 = models.CharField(max_length=40, blank=True)
