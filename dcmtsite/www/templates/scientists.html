@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block content %}
-<h3>Сотрудники отдела</h3>
+<h1>Сотрудники отдела</h1>
 <ul>
 {% for p in people%}
 <li><a href='/scientists/{{ p.slug }}'>{{ p.name }} {{ p.patronymic }} {{ p.family_name }}</a></li>
