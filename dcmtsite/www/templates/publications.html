@@ -31,13 +31,15 @@
   {% for paper in articles %}
     <li>{{ paper.authors }}, {{ paper.journal }}, {{ paper.year }}. </li>  
     {% if paper.wos_link %}
-        <p>WOS: <a href={{paper.wos_link}}>{{paper.wos_link}}</a> <a href={{paper.wos_link}}>{{paper.wos_link}} 
+        <p>WOS: <a href={{paper.wos_link}}>{{paper.wos_link}}</a> <a href={{paper.wos_link}}>{{paper.wos_link}}</a> 
             </p>
             
     {% endif %}
   {% endfor %}
   </ol>
 {% endif %}  
+
+<img src="{% static 'download.ico'%}">
 
 {% if conf_procs %}
   <h4><a name="conf_procs"></a>Труды конференций</h4>
