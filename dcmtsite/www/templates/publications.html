@@ -31,9 +31,8 @@
   {% for paper in articles %}
     <li>{{ paper.authors }}, {{ paper.journal }}, {{ paper.year }}. </li>  
     {% if paper.wos_link %}
-        <p>WOS: <a href={{paper.wos_link}}>{{paper.wos_link}}</a> 
-        <!--<a href={{paper.wos_link}}> <img src="{% static 'download.ico'%}" > </a>-->
-                    
+        <p>WOS: <a href={{paper.wos_link}}>{{paper.wos_link}}</a>
+            
     {% endif %}
   {% endfor %}
   </ol>
