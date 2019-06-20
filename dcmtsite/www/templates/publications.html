@@ -33,7 +33,8 @@
     <li>{{ paper.authors }}, {{ paper.journal }}, {{ paper.year }}. </li>  
     {% if paper.wos_link %}
         <p>WOS: <a href={{paper.wos_link}}>{{paper.wos_link}}</a> <a href={{paper.wos_link}}><img src="{% static 'download.ico'%}" width="20" height="20" >
-            </a> </p>
+        </a></p>
+        <div style="border: 2px solid #aa0000; width:100px; background: #F8E4DF; padding: 5px; border-radius: 3px; font-size: 12px; font-family: Arial;">WOS</div>
             
     {% endif %}
   {% endfor %}
