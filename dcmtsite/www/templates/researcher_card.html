@@ -26,7 +26,7 @@
 <h4>Публикации</h4>
 <ol>
  {% for paper in papers %}
-<li> {{ paper.authors }}, {{ paper.title }}, {{ paper.journal }}, {{ paper.year }} </li> 
+<li> {{ paper.authors }}, <i>{{ paper.title }}</i>, {{ paper.journal }}.</li> 
  {% endfor %}
  
   <!--<li>S.V. Fortova, P.S. Utkin and V.V. Shepelev, Application of software complex Turbo Problem Solver
