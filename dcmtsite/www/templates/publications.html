@@ -31,17 +31,24 @@
   <ol>
   {% for paper in articles %}
     <li>{{ paper.authors }}, {{ paper.journal }}, {{ paper.year }}. </li>  
-    {% if paper.wos_link %}
-        <p>WOS: <a href={{paper.wos_link}}>{{paper.wos_link}}</a> <a href={{paper.wos_link}}><img src="{% static 'download.ico'%}" width="20" height="20" >
-        </a></p>
-        <div style="border: 1px solid grey; width:40px; background: grey; padding: 1px; border-radius: 4px; color: white; text-align='center';"> WOS </div>
-            
+    {% if paper.abs_link %}
+        <p>Abstract: <a href={{paper.wos_link}}>{{paper.abs_link}}</a> <a href={{paper.wos_link}}></p>           
     {% endif %}
+    {% if paper.wos_link %}
+        <p>WOS: <a href={{paper.wos_link}}>{{paper.wos_link}}</a> <a href={{paper.wos_link}}></p>           
+    {% endif %}
+    {% if paper.scopus_link %}
+        <p>Scopus: <a href={{paper.wos_link}}>{{paper.scopus_link}}</a> <a href={{paper.wos_link}}></p>           
+    {% endif %}
+    {% if paper.rinc_link %}
+        <p>RINC: <a href={{paper.wos_link}}>{{paper.rinc_link}}</a> <a href={{paper.wos_link}}></p>           
+    {% endif %}
+    {% if paper.download_link %}
+        <p>Download: <a href={{paper.wos_link}}>{{paper.abs_link}}</a> <a href={{paper.wos_link}}></p>           
+    {% endif %}    
   {% endfor %}
   </ol>
 {% endif %}  
-
-
 
 {% if conf_procs %}
   <h4><a name="conf_procs"></a>Труды конференций</h4>
