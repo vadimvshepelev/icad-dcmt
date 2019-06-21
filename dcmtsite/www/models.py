@@ -27,7 +27,6 @@ class Paper(models.Model):
 	#dcmt_author_6 = models.CharField(max_length=40, blank=True)
 	#dcmt_author_7 = models.CharField(max_length=40, blank=True)
 	#dcmt_author_8 = models.CharField(max_length=40, blank=True)    
-    year = models.IntegerField()
     abs_link = models.CharField(max_length=256, blank=True)
     rinc_link = models.CharField(max_length=256, blank=True)
     scopus_link = models.CharField(max_length=256, blank=True)
