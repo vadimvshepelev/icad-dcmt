@@ -15,7 +15,7 @@
   {% for paper in articles %}
     <li> {{ paper.authors }}, <i>{{ paper.title }}</i>, 
     {% if paper.abs_link %}
-        <a href={{paper.abs_link}}>{{ paper.journal }}</a>. &ensp
+        <a href={{paper.abs_link}}>{{ paper.journal }}</a>. 
     {% else %}    
         {{ paper.journal }}. &ensp;&ensp;&ensp;&ensp;
     {% endif %} 
