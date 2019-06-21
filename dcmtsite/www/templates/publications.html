@@ -15,10 +15,11 @@
   {% for paper in articles %}
     <li> {{ paper.authors }}, <i>{{ paper.title }}</i>, 
     {% if paper.abs_link %}
-        <a href={{paper.abs_link}}>{{ paper.journal }}</a>. &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <a href={{paper.abs_link}}>{{ paper.journal }}</a>. 
     {% else %}    
-        {{ paper.journal }}. &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        {{ paper.journal }}. 
     {% endif %} 
+    <p>
     {% if paper.wos_link %}
         <a href={{paper.wos_link}}>WOS</a>
     {% endif %}
@@ -31,6 +32,7 @@
     {% if paper.download_link %}
         <a href={{paper.download_link}}>PDF</a>           
     {% endif %}    
+    </p>
     </li>  
   {% endfor %}
   </ol>
