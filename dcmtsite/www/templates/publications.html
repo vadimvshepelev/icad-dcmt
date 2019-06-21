@@ -11,30 +11,14 @@
 		
 {% block content%}
 <h1>Публикации отдела</h1>
-{% if years %}
-  <p><small>
-  {% for year in years %}
-  <a href='/publications'>{{year}}</a>&nbsp; 
-  {% endfor %}
-  </small></p>
-{% endif %}
-<p><small>
-  {% if articles %} <a class='dash' href='#articles'>Статьи</a>&emsp; {% endif %}  
-  {% if conf_procs %}  <a class='dash' href='#conf_procs'>Труды конференций</a>&emsp; {% endif %}  
-  {% if monos %} <a class='dash' href='#monos'>Монографии</a>&emsp; {% endif %}  
-  {% if preprints %} <a class='dash' href='#preprints'>Препринты</a>&emsp; {% endif %}  
-  {% if other %} <a class='dash' href='#other'>Другое</a> {% endif %}  
-</small></p>
-
-{% if articles %}
-  <h4><a name="articles"></a>Статьи</h4>
   <ol>
   {% for paper in articles %}
-    <li>{{ paper.authors }}, {{ paper.journal }}, {{ paper.year }}. </li>  
-    <p>
+    <li> {{ paper.authors }} 
     {% if paper.abs_link %}
-        <a href={{paper.abs_link}}>Abstract</a>
-    {% endif %}
+        <a href={{paper.abs_link}}>{{ paper.journal }}</a>.
+    {% else %}    
+        {{ paper.journal }}.
+    {% endif %} 
     {% if paper.wos_link %}
         <a href={{paper.wos_link}}>WOS</a>
     {% endif %}
@@ -42,50 +26,14 @@
         <a href={{paper.scopus_link}}>Scopus</a> 
     {% endif %}
     {% if paper.rinc_link %}
-        <a href={{paper.rinc_link}}>RINC</a>
+        <a href={{paper.rinc_link}}>РИНЦ</a>
     {% endif %}
     {% if paper.download_link %}
-        <a href={{paper.download_link}}>Download</a>           
+        <a href={{paper.download_link}}>PDF</a>           
     {% endif %}    
-    </p>
+    </li>  
   {% endfor %}
   </ol>
-{% endif %}  
 
-{% if conf_procs %}
-  <h4><a name="conf_procs"></a>Труды конференций</h4>
-  <ol>
-  {% for paper in conf_procs %}
-    <li>{{ paper }}</li>  
-  {% endfor %}
-  </ol>
-{% endif %}  
-
-{% if monos %}
-  <h4><a name="monos"></a>Монографии</h4>
-  <ol>
-  {% for paper in monos %}
-    <li>{{ paper }}</li>  
-  {% endfor %}
-  </ol>
-{% endif %}
-
-{% if preprints %}
-  <h4><a name="preprints"></a>Препринты</h4>
-  <ol>
-  {% for paper in preprints %}
-    <li>{{ paper }}</li>  
-  {% endfor %}
-  </ol>
-{% endif %}
-
-{% if other %}
-  <h4><a name="other"></a>Другое</h4>
-  <ol>
-  {% for paper in other %}
-    <li>{{ paper }}</li>  
-  {% endfor %}
-  </ol>
-{% endif %}
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 {% endblock %}
