@@ -34,8 +34,8 @@
     {% endif %}    
     </p>
     </li>  
-    
-    {% for paper in conf_procs %}
+  {% endfor %}  
+  {% for paper in conf_procs %}
     <li> {{ paper.authors }}, <i>{{ paper.title }}</i>, 
     {% if paper.abs_link %}
         <a href={{paper.abs_link}}>{{ paper.journal }}</a>. 
