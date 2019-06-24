@@ -21,13 +21,13 @@
     {% endif %} 
     <p>
     {% if paper.wos_link %}
-        <a href={{paper.wos_link}}>WOS</a>
+        <a href={{paper.wos_link}}><img src="{% static 'wos.ico' %}" width="20" height = "20" alt="Ссылка на публикацию в Web of Science"></a>
     {% endif %}
     {% if paper.scopus_link %}
-        <a href={{paper.scopus_link}}>Scopus</a> 
+        <a href={{paper.scopus_link}}><img src="{% static 'scopus.ico' %}" width="20" height = "20" alt="Ссылка на публикацию в Scopus"></a> 
     {% endif %}
     {% if paper.rinc_link %}
-        <a href={{paper.rinc_link}}>РИНЦ<img src="{% static 'rsci.ico' %}" width="20" height = "20" alt="Ссылка на публикацию в РИНЦ"></a>
+        <a href={{paper.rinc_link}}><img src="{% static 'rsci.ico' %}" width="20" height = "20" alt="Ссылка на публикацию в РИНЦ"></a>
     {% endif %}
     {% if paper.download_link %}
         <a href={{paper.download_link}}><img src="{% static 'pdf-icon-2.ico' %}" width="20" height = "20" alt="Скачать в формате PDF"></a>           
