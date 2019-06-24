@@ -27,10 +27,10 @@
         <a href={{paper.scopus_link}}>Scopus</a> 
     {% endif %}
     {% if paper.rinc_link %}
-        <a href={{paper.rinc_link}}>РИНЦ</a>
+        <a href={{paper.rinc_link}}>РИНЦ<img src="{% static 'rsci.ico' %}" width="20" height = "20" alt="Ссылка на публикацию в РИНЦ"></a>
     {% endif %}
     {% if paper.download_link %}
-        <a href={{paper.download_link}}><img src="{% static 'pdf-icon-2.ico'%}" width="20" height = "20" alt="Скачать в формате PDF"></a>           
+        <a href={{paper.download_link}}><img src="{% static 'pdf-icon-2.ico' %}" width="20" height = "20" alt="Скачать в формате PDF"></a>           
     {% endif %}    
     </p>
     </li>  
