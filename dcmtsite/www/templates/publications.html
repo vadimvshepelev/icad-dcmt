@@ -21,16 +21,16 @@
     {% endif %} 
     <p>
     {% if paper.wos_link %}
-        <a href={{paper.wos_link}}><img src="{% static 'wos.ico' %}" width="20" height = "20" alt="Ссылка на публикацию в Web of Science"></a>
+        <a href={{paper.wos_link}} title="Ссылка на публикацию в Web of Science"><img src="{% static 'wos.ico' %}" width="20" height = "20" alt="WOS"></a>
     {% endif %}
     {% if paper.scopus_link %}
-        <a href={{paper.scopus_link}}><img src="{% static 'scopus.ico' %}" width="20" height = "20" alt="Ссылка на публикацию в Scopus"></a> 
+        <a href={{paper.scopus_link}} title="Ссылка на публикацию в Scopus"><img src="{% static 'scopus.ico' %}" width="20" height = "20" alt="Scopus"></a> 
     {% endif %}
     {% if paper.rinc_link %}
-        <a href={{paper.rinc_link}}><img src="{% static 'rsci.ico' %}" width="20" height = "20" alt="Ссылка на публикацию в РИНЦ"></a>
+        <a href={{paper.rinc_link}} title="Ссылка на публикацию в РИНЦ"><img src="{% static 'rsci.ico' %}" width="20" height = "20" alt="РИНЦ"></a>
     {% endif %}
     {% if paper.download_link %}
-        <a href={{paper.download_link}}><img src="{% static 'pdf-icon-2.ico' %}" width="20" height = "20" alt="Скачать в формате PDF"></a>           
+        <a href={{paper.download_link}} title="Скачать полный текст статьи в PDF"><img src="{% static 'pdf-icon-2.ico' %}" width="20" height = "20" alt="PDF"></a>           
     {% endif %}    
     </p>
     </li>  
