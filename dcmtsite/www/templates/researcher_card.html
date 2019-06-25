@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block breadcrumbs %}
-<p><a href='/'>Главная</a> -> <a href='/scientists'>Сотрудники</a> -> <a href='/scientists/shepelev'>В.В. Шепелев</a></p>           
+<p><a href='/'>Главная</a> -> <a href='/people'>Сотрудники</a> -> <a href='/people/{{researcher.slug}}'>{{researcher}}</a></p>           
 {% endblock %}
 
 {% block content %}
@@ -49,29 +49,6 @@
     </p>
     </li>  
   {% endfor %}  
-  {% for paper in conf_procs %}
-    <li> {{ paper.authors }}, <i>{{ paper.title }}</i>, 
-    {% if paper.abs_link %}
-        <a href={{paper.abs_link}}>{{ paper.journal }}</a>. 
-    {% else %}    
-        {{ paper.journal }}. 
-    {% endif %} 
-    <p>
-    {% if paper.wos_link %}
-        <a href={{paper.wos_link}}>WOS</a>
-    {% endif %}
-    {% if paper.scopus_link %}
-        <a href={{paper.scopus_link}}>Scopus</a> 
-    {% endif %}
-    {% if paper.rinc_link %}
-        <a href={{paper.rinc_link}}>РИНЦ</a>
-    {% endif %}
-    {% if paper.download_link %}
-        <a href={{paper.download_link}}>PDF</a>           
-    {% endif %}    
-    </p>
-    </li>  
-  {% endfor %}
   </ol>
  
 <br><br><br>
