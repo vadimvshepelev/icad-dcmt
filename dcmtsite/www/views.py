@@ -5,9 +5,9 @@ from datetime import date
 # Create your views here
 
 def index(request):
-    people = Person.objects.all().order_by('family_name')
+    # people = Person.objects.all().order_by('family_name')
     # return render(request, 'index.html')
-    return render(request, 'index.html', {'people': people})
+    return render(request, 'index.html')
 
 def research(request):
     people = Person.objects.all().order_by('family_name')
@@ -46,8 +46,8 @@ def researcher(request, researcher_slug):
     return render(request, 'researcher_card.html', context)
 
 def index_en(request):
-    people = Person.objects.all().order_by('family_name')    
-    return render(request, 'index_en.html', {'people': people})
+    # people = Person.objects.all().order_by('family_name_en')    
+    return render(request, 'index_en.html')
 
 def research_en(request):
     people = Person.objects.all().order_by('family_name')
@@ -69,7 +69,7 @@ def publications_en(request):
     return render(request, 'publications_en.html', context)
 
 def people_en(request):
-    people = Person.objects.all().order_by('family_name')
+    people = Person.objects.all().order_by('family_name_en')
     return render(request, 'people_en.html', {'people': people})		
 	
 def conferences_en(request):
