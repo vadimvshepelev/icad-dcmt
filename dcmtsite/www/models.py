@@ -10,7 +10,7 @@ class Person(models.Model):
     position = models.CharField(max_length=40)
     email = models.CharField(max_length=40)
     photo = models.CharField(max_length=256)
-	name_en = models.CharField(max_length=40)
+    name_en = models.CharField(max_length=40)
     patronymic_en = models.CharField(max_length=40)
     family_name_en = models.CharField(max_length=40)
     degree_en = models.CharField(max_length=40)
