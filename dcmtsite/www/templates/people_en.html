@@ -1,18 +1,18 @@
-{% extends 'base.html' %}
+{% extends 'base_en.html' %}
 
 {% block title %}
-Сотрудники - ОВМиТ ИАП РАН
+People - DCMT of ICAD RAS
 {% endblock %}
 
 {% block breadcrumbs %}
-<p><a href='/'>Главная</a> -> <a href='/scientists'>Сотрудники</a></p>           
+<p><a href='/en/'>Home</a> -> <a href='/en/people'>People</a></p>           
 {% endblock %}
 
 {% block content %}
-<h1>Сотрудники отдела</h1>
+<h1>People</h1>
 <ul>
 {% for p in people%}
-<li><a href='/scientists/{{ p.slug }}'>{{ p.name }} {{ p.patronymic }} {{ p.family_name }}</a></li>
+<li><a href='/en/people/{{ p.slug }}'>{{ p.name_en }} {{ p.patronymic_en }} {{ p.family_name_en }}</a></li>
 {% endfor %}
 </ul>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
