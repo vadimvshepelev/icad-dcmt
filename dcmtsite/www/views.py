@@ -59,7 +59,7 @@ def publications_en(request):
     # year_oldest = 2000
     # year_cur = date.today().year
     # years = range(year_oldest, year_cur+1)
-	papers = Paper.objects.all();
+    papers = Paper.objects.all();
     # articles = Paper.objects.filter(type='ART')
     # conf_procs = Paper.objects.filter(type='CPR')
     # monos = Paper.objects.filter(type='MNG')
