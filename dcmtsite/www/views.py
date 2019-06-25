@@ -20,7 +20,6 @@ def publications(request):
     #years = range(year_oldest, year_cur+1)
     papers = Paper.objects.all()
     context = {'people': people, 
-               'years': years,
                'papers': papers}
     return render(request, 'publications.html', context)
 
@@ -65,8 +64,7 @@ def publications_en(request):
     # monos = Paper.objects.filter(type='MNG')
     # preprints = Paper.objects.filter(type='PPR')
     # other = Paper.objects.filter(type='OTH')	
-    context = {'people': people, 
-               'years': years,
+    context = {'people': people,                
                'papers': papers}
     return render(request, 'publications_en.html', context)
 
