@@ -21,7 +21,7 @@ class Person(models.Model):
         return self.name[0] + '.' + self.patronymic[0] + '. ' + self.family_name 
 	
     def __str_en__(self):
-        return self.name[0] + '.' + self.patronymic[0] + '. ' + self.family_name 
+        return self.name_en[0] + '.' + self.patronymic_en[0] + '. ' + self.family_name_en 
 	
 class Paper(models.Model):
     authors = models.CharField(max_length=256) 
