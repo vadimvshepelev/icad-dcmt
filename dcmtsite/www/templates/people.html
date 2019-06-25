@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block breadcrumbs %}
-<p><a href='/'>Главная</a> -> <a href='/scientists'>Сотрудники</a></p>           
+<p><a href='/'>Главная</a> -> <a href='/people'>Сотрудники</a></p>           
 {% endblock %}
 
 {% block content %}
 <h1>Сотрудники отдела</h1>
 <ul>
 {% for p in people%}
-<li><a href='/scientists/{{ p.slug }}'>{{ p.name }} {{ p.patronymic }} {{ p.family_name }}</a></li>
+<li><a href='/people/{{ p.slug }}'>{{ p.name }} {{ p.patronymic }} {{ p.family_name }}</a></li>
 {% endfor %}
 </ul>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
