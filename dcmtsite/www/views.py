@@ -55,8 +55,7 @@ def researcher(request, researcher_slug):
     return render(request, 'researcher_card.html', context)
 
 def index_en(request):
-    people = Person.objects.all().order_by('family_name')
-    # return render(request, 'index.html')
+    people = Person.objects.all().order_by('family_name')    
     return render(request, 'index_en.html', {'people': people})
 
 def research_en(request):
