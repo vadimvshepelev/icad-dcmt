@@ -1,15 +1,11 @@
 .footer {
 	color: #EDECEC;
 	background-color: #363636;
-	position: absolute;
-	bottom: 0;
 }
 
 .header {
 	background-color: #eee;
 }
-
-
 
 .dash {
     text-decoration: none; /* Убираем подчеркивание */
