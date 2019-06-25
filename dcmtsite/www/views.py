@@ -53,18 +53,18 @@ def robots_txt(request):
 	
 # Hardcoded for the prototype 
 # TODO: parametric links with 'slug' parameter
-def fortova(request):
-    people = Person.objects.all().order_by('family_name')
-    return render(request, 'fortova.html', {'people': people})
-	
-def shepelev(request):
-    people = Person.objects.all().order_by('family_name')
-    return render(request, 'shepelev.html', {'people': people})
+#def fortova(request):
+#    people = Person.objects.all().order_by('family_name')
+#    return render(request, 'fortova.html', {'people': people})
+#	
+#def shepelev(request):
+#    people = Person.objects.all().order_by('family_name')
+#    return render(request, 'shepelev.html', {'people': people})
 	
 def researcher(request, researcher_slug):
     researcher = Person.objects.get(slug=researcher_slug)
     # papers = Paper.objects.filter(authors__contains==scientist.family_name)
-    papers = Paper.objects.all()
+    papers = Paper.objects.filter(researcher in Paper.dcmt_authors.all())
     context = {'researcher_slug': researcher_slug, 'researcher': researcher, 'papers': papers }
     return render(request, 'researcher_card.html', context)
 	
