@@ -32,9 +32,9 @@ def publications(request):
                'other': other}
     return render(request, 'publications.html', context)
 
-def scientists(request):
+def people(request):
     people = Person.objects.all().order_by('family_name')
-    return render(request, 'scientists.html', {'people': people})		
+    return render(request, 'people.html', {'people': people})		
 	
 def conferences(request):
     people = Person.objects.all().order_by('family_name')
@@ -48,39 +48,63 @@ def contacts(request):
     people = Person.objects.all().order_by('family_name')
     return render(request, 'contacts.html', {'people': people})
 
-def robots_txt(request):
-	return render(request, 'robots.txt', content_type='text/plain')	
-	
-# Hardcoded for the prototype 
-# TODO: parametric links with 'slug' parameter
-#def fortova(request):
-#    people = Person.objects.all().order_by('family_name')
-#    return render(request, 'fortova.html', {'people': people})
-#	
-#def shepelev(request):
-#    people = Person.objects.all().order_by('family_name')
-#    return render(request, 'shepelev.html', {'people': people})
-	
 def researcher(request, researcher_slug):
     researcher = Person.objects.get(slug=researcher_slug)
-    
-    
-    
-    
-    # papers = Paper.objects.filter(authors__contains==scientist.family_name)    
     papers = Paper.objects.filter(dcmt_authors=researcher)
-    #papers = Paper.objects.all()    
-    #for paper in papers:
-    #    if not researcher in paper.dcmt_authors:
-    #        papers.remove(paper)
-    
-    
-    
-    
-    
     context = {'researcher_slug': researcher_slug, 'researcher': researcher, 'papers': papers }
     return render(request, 'researcher_card.html', context)
+
+def index_en(request):
+    people = Person.objects.all().order_by('family_name')
+    # return render(request, 'index.html')
+    return render(request, 'index_en.html', {'people': people})
+
+def research_en(request):
+    people = Person.objects.all().order_by('family_name')
+    return render(request, 'research_en.html', {'people': people})
 	
+def publications_en(request):
+    people = Person.objects.all().order_by('family_name')
+    year_oldest = 2000
+    year_cur = date.today().year
+    years = range(year_oldest, year_cur+1)
+    articles = Paper.objects.filter(type='ART')
+    conf_procs = Paper.objects.filter(type='CPR')
+    monos = Paper.objects.filter(type='MNG')
+    preprints = Paper.objects.filter(type='PPR')
+    other = Paper.objects.filter(type='OTH')	
+    context = {'people': people, 
+               'years': years,
+               'articles': articles,
+               'conf_procs': conf_procs, 
+               'monos': monos, 
+               'preprints': preprints,
+               'other': other}
+    return render(request, 'publications_en.html', context)
+
+def people_en(request):
+    people = Person.objects.all().order_by('family_name')
+    return render(request, 'people_en.html', {'people': people})		
 	
+def conferences_en(request):
+    people = Person.objects.all().order_by('family_name')
+    return render(request, 'conferences_en.html', {'people': people})	
 	
-	
+def grants_en(request):
+    people = Person.objects.all().order_by('family_name')
+    return render(request, 'grants_en.html', {'people': people})
+
+def contacts_en(request):
+    people = Person.objects.all().order_by('family_name')
+    return render(request, 'contacts_en.html', {'people': people})
+
+def researcher_en(request, researcher_slug):
+    researcher = Person.objects.get(slug=researcher_slug)
+    papers = Paper.objects.filter(dcmt_authors=researcher)
+    context = {'researcher_slug': researcher_slug, 'researcher': researcher, 'papers': papers }
+    return render(request, 'researcher_card_en.html', context)
+
+
+def robots_txt(request):
+	return render(request, 'robots.txt', content_type='text/plain')	
+    

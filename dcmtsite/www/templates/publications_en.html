@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+Публикации - ОВМиТ ИАП РАН
+{% endblock %}
+
+{% block breadcrumbs %}
+<p><a href='/'>Главная</a> -> <a href='/publications'>Публикации</a></p>       
+{% endblock %}
+		
+{% block content%}
+<h1>Публикации отдела</h1>
+  <ol>
+  {% for paper in articles %}
+    <li> {{ paper.authors }}, <i>{{ paper.title }}</i>, 
+    {% if paper.abs_link %}
+        <a href={{paper.abs_link}}>{{ paper.journal }}</a>. 
+    {% else %}    
+        {{ paper.journal }}. 
+    {% endif %} 
+    <p>
+    {% if paper.wos_link %}
+        <a href={{paper.wos_link}} title="Ссылка на публикацию в Web of Science"><img src="{% static 'wos.ico' %}" width="20" height = "20" alt="WOS"></a>
+    {% endif %}
+    {% if paper.scopus_link %}
+        <a href={{paper.scopus_link}} title="Ссылка на публикацию в Scopus"><img src="{% static 'scopus.ico' %}" width="20" height = "20" alt="Scopus"></a> 
+    {% endif %}
+    {% if paper.rinc_link %}
+        <a href={{paper.rinc_link}} title="Ссылка на публикацию в РИНЦ"><img src="{% static 'rsci.ico' %}" width="20" height = "20" alt="РИНЦ"></a>
+    {% endif %}
+    {% if paper.download_link %}
+        <a href={{paper.download_link}} title="Скачать полный текст статьи в PDF"><img src="{% static 'pdf-icon-2.ico' %}" width="20" height = "20" alt="PDF"></a>           
+    {% endif %}    
+    </p>
+    </li>  
+  {% endfor %}  
+  {% for paper in conf_procs %}
+    <li> {{ paper.authors }}, <i>{{ paper.title }}</i>, 
+    {% if paper.abs_link %}
+        <a href={{paper.abs_link}}>{{ paper.journal }}</a>. 
+    {% else %}    
+        {{ paper.journal }}. 
+    {% endif %} 
+    <p>
+    {% if paper.wos_link %}
+        <a href={{paper.wos_link}}>WOS</a>
+    {% endif %}
+    {% if paper.scopus_link %}
+        <a href={{paper.scopus_link}}>Scopus</a> 
+    {% endif %}
+    {% if paper.rinc_link %}
+        <a href={{paper.rinc_link}}>РИНЦ</a>
+    {% endif %}
+    {% if paper.download_link %}
+        <a href={{paper.download_link}}>PDF</a>           
+    {% endif %}    
+    </p>
+    </li>  
+  {% endfor %}
+  </ol>
+ 
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

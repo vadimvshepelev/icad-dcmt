@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Сотрудники - ОВМиТ ИАП РАН
+{% endblock %}
+
+{% block breadcrumbs %}
+<p><a href='/'>Главная</a> -> <a href='/scientists'>Сотрудники</a></p>           
+{% endblock %}
+
+{% block content %}
+<h1>Сотрудники отдела</h1>
+<ul>
+{% for p in people%}
+<li><a href='/scientists/{{ p.slug }}'>{{ p.name }} {{ p.patronymic }} {{ p.family_name }}</a></li>
+{% endfor %}
+</ul>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}
+
+
