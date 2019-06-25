@@ -10,7 +10,7 @@ urlpatterns = [
 	url(r'^contacts/$', views.contacts),
 	url(r'^people/$', views.people),
 	url(r'^people/(?P<researcher_slug>[a-z]+)$', views.researcher), 
-    url(r'^/en/$', views.index_en),
+    url(r'^en/$', views.index_en),
     url(r'^/en/research/$', views.research_en),
 	url(r'^/en/publications/$', views.publications_en),
 	url(r'^/en/conferences/$', views.conferences_en),
