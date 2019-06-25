@@ -15,21 +15,13 @@ def research(request):
 	
 def publications(request):
     people = Person.objects.all().order_by('family_name')
-    year_oldest = 2000
-    year_cur = date.today().year
-    years = range(year_oldest, year_cur+1)
-    articles = Paper.objects.filter(type='ART')
-    conf_procs = Paper.objects.filter(type='CPR')
-    monos = Paper.objects.filter(type='MNG')
-    preprints = Paper.objects.filter(type='PPR')
-    other = Paper.objects.filter(type='OTH')	
+    #year_oldest = 2000
+    #year_cur = date.today().year
+    #years = range(year_oldest, year_cur+1)
+    papers = Paper.objects.all()
     context = {'people': people, 
                'years': years,
-               'articles': articles,
-               'conf_procs': conf_procs, 
-               'monos': monos, 
-               'preprints': preprints,
-               'other': other}
+               'papers': papers}
     return render(request, 'publications.html', context)
 
 def people(request):
@@ -64,21 +56,18 @@ def research_en(request):
 	
 def publications_en(request):
     people = Person.objects.all().order_by('family_name')
-    year_oldest = 2000
-    year_cur = date.today().year
-    years = range(year_oldest, year_cur+1)
-    articles = Paper.objects.filter(type='ART')
-    conf_procs = Paper.objects.filter(type='CPR')
-    monos = Paper.objects.filter(type='MNG')
-    preprints = Paper.objects.filter(type='PPR')
-    other = Paper.objects.filter(type='OTH')	
+    # year_oldest = 2000
+    # year_cur = date.today().year
+    # years = range(year_oldest, year_cur+1)
+	papers = Paper.objects.all();
+    # articles = Paper.objects.filter(type='ART')
+    # conf_procs = Paper.objects.filter(type='CPR')
+    # monos = Paper.objects.filter(type='MNG')
+    # preprints = Paper.objects.filter(type='PPR')
+    # other = Paper.objects.filter(type='OTH')	
     context = {'people': people, 
                'years': years,
-               'articles': articles,
-               'conf_procs': conf_procs, 
-               'monos': monos, 
-               'preprints': preprints,
-               'other': other}
+               'papers': papers}
     return render(request, 'publications_en.html', context)
 
 def people_en(request):
