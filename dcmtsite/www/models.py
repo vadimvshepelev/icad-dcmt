@@ -10,11 +10,11 @@ class Person(models.Model):
     position = models.CharField(max_length=40)
     email = models.CharField(max_length=40)
     photo = models.CharField(max_length=256)
-    name_en = models.CharField(max_length=40)
-    patronymic_en = models.CharField(max_length=40)
-    family_name_en = models.CharField(max_length=40)
-    degree_en = models.CharField(max_length=40)
-    position_en = models.CharField(max_length=40)
+    name_en = models.CharField(max_length=40, default='Name')
+    patronymic_en = models.CharField(max_length=40, default='P.')
+    family_name_en = models.CharField(max_length=40, default='Family Name')
+    degree_en = models.CharField(max_length=40, default='Degree')
+    position_en = models.CharField(max_length=40, default='Position')
 	
     slug = models.SlugField()
     def __str__(self):
