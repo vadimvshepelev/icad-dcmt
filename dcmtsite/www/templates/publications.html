@@ -11,8 +11,6 @@
 		
 {% block content%}
 <h1>Публикации отдела</h1>
-
-{% block publications %}
   <ol>
   {% for paper in articles %}
     <li> {{ paper.authors }}, <i>{{ paper.title }}</i>, 
@@ -61,7 +59,6 @@
     </li>  
   {% endfor %}
   </ol>
- {% endblock%}
-
+ 
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 {% endblock %}

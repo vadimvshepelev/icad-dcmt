@@ -25,7 +25,7 @@
 <br>
 <h4>Публикации</h4>
   <ol>
-  {% for paper in articles %}
+  {% for paper in papers %}
     <li> {{ paper.authors }}, <i>{{ paper.title }}</i>, 
     {% if paper.abs_link %}
         <a href={{paper.abs_link}}>{{ paper.journal }}</a>. 
