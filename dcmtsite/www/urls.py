@@ -18,5 +18,5 @@ urlpatterns = [
 	url(r'^/en/contacts/$', views.contacts_en),
 	url(r'^/en/people/$', views.people_en),
 	url(r'^/en/people/(?P<researcher_slug>[a-z]+)$', views.researcher_en), 
-	url(r'^robots.txt$', views.robots_txt_en),
+	url(r'^robots.txt$', views.robots_txt),
 ]
