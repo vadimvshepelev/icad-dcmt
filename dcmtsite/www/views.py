@@ -86,7 +86,7 @@ def contacts_en(request):
 
 def researcher_en(request, researcher_slug):
     researcher = Person.objects.get(slug=researcher_slug)
-	researcher_en = researcher.__str_en__()
+    researcher_en = researcher.__str_en__()
     papers = Paper.objects.filter(dcmt_authors=researcher)
     context = {'researcher_slug': researcher_slug, 'researcher': researcher, 'researcher_en': researcher_en, 'papers': papers }
     return render(request, 'researcher_card_en.html', context)
