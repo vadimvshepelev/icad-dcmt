@@ -63,8 +63,9 @@ def robots_txt(request):
 	
 def researcher(request, researcher_slug):
     researcher = Person.objects.get(slug=researcher_slug)
-    # papers = Paper.objects.filter(authors__contains==scientist.family_name)
-    papers = Paper.objects.filter(researcher in Paper.dcmt_authors)
+    # papers = Paper.objects.filter(authors__contains==scientist.family_name)    
+    #papers = Paper.objects.filter(researcher in Paper.dcmt_authors)
+    papers = Paper.objects.all().exclude(researcher in dcmt_authors==false)
     context = {'researcher_slug': researcher_slug, 'researcher': researcher, 'papers': papers }
     return render(request, 'researcher_card.html', context)
 	
