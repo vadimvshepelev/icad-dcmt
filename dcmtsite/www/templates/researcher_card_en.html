@@ -1,30 +1,30 @@
-{% extends 'base.html' %}
+{% extends 'base_en.html' %}
 {% load staticfiles %}
 
 {% block title %}
-{{ researcher }} - Сотрудники - ОВМиТ ИАП РАН
+{{ researcher_en }} - People - DCMT of ICAD RAS
 {% endblock %}
 
 {% block breadcrumbs %}
-<p><a href='/'>Главная</a> -> <a href='/scientists'>Сотрудники</a> -> <a href='/scientists/shepelev'>В.В. Шепелев</a></p>           
+<p><a href='/en/'>Home</a> -> <a href='/people'>People</a> -> <a href='/people/{{researcher.slug}}'>{{researcher_en}}</a></p>           
 {% endblock %}
 
 {% block content %}
-<h1>{{ researcher.name }} {{ researcher.patronymic }} {{ researcher.family_name }}</h1>
+<h1>{{ researcher.name_en }} {{ researcher.patronymic_en }} {{ researcher.family_name_en }}</h1>
 <div class='row'>
   <div class='col-md-3'>
-    <img src='https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/2/000/24c/152/0c2b9dc.jpg' alt='{{researcher}}' width='100'></img>
+    <img src='https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/2/000/24c/152/0c2b9dc.jpg' alt='{{researcher_en}}' width='100'></img>
   </div>
   <div class='col-md-9'>
      <br>
-     <p>Должность: {{ researcher.position }}</p>
-	 <p>Ученая степень: {{ researcher.degree }}</p>
+     <p>Должность: {{ researcher.position_en }}</p>
+	 <p>Ученая степень: {{ researcher.degree_en }}</p>
 	 <p>E-mail: {{ researcher.email }}</p>
   </div>
   <div class='clearfix'></div>
 </div>
 <br>
-<h4>Публикации</h4>
+<h4>Publications</h4>
   <ol>
   {% for paper in papers %}
     <li> {{ paper.authors }}, <i>{{ paper.title }}</i>, 
@@ -35,43 +35,20 @@
     {% endif %} 
     <p>
     {% if paper.wos_link %}
-        <a href={{paper.wos_link}} title="Ссылка на публикацию в Web of Science"><img src="{% static 'wos.ico' %}" width="20" height = "20" alt="WOS"></a>
+        <a href={{paper.wos_link}} title="Web of Science link"><img src="{% static 'wos.ico' %}" width="20" height = "20" alt="WOS"></a>
     {% endif %}
     {% if paper.scopus_link %}
-        <a href={{paper.scopus_link}} title="Ссылка на публикацию в Scopus"><img src="{% static 'scopus.ico' %}" width="20" height = "20" alt="Scopus"></a> 
+        <a href={{paper.scopus_link}} title="Scopus link"><img src="{% static 'scopus.ico' %}" width="20" height = "20" alt="Scopus"></a> 
     {% endif %}
     {% if paper.rinc_link %}
-        <a href={{paper.rinc_link}} title="Ссылка на публикацию в РИНЦ"><img src="{% static 'rsci.ico' %}" width="20" height = "20" alt="РИНЦ"></a>
+        <a href={{paper.rinc_link}} title="RSCI link"><img src="{% static 'rsci.ico' %}" width="20" height = "20" alt="RSCI"></a>
     {% endif %}
     {% if paper.download_link %}
-        <a href={{paper.download_link}} title="Скачать полный текст статьи в PDF"><img src="{% static 'pdf-icon-2.ico' %}" width="20" height = "20" alt="PDF"></a>           
+        <a href={{paper.download_link}} title="Download PDF full-text"><img src="{% static 'pdf-icon-2.ico' %}" width="20" height = "20" alt="PDF"></a>           
     {% endif %}    
     </p>
     </li>  
   {% endfor %}  
-  {% for paper in conf_procs %}
-    <li> {{ paper.authors }}, <i>{{ paper.title }}</i>, 
-    {% if paper.abs_link %}
-        <a href={{paper.abs_link}}>{{ paper.journal }}</a>. 
-    {% else %}    
-        {{ paper.journal }}. 
-    {% endif %} 
-    <p>
-    {% if paper.wos_link %}
-        <a href={{paper.wos_link}}>WOS</a>
-    {% endif %}
-    {% if paper.scopus_link %}
-        <a href={{paper.scopus_link}}>Scopus</a> 
-    {% endif %}
-    {% if paper.rinc_link %}
-        <a href={{paper.rinc_link}}>РИНЦ</a>
-    {% endif %}
-    {% if paper.download_link %}
-        <a href={{paper.download_link}}>PDF</a>           
-    {% endif %}    
-    </p>
-    </li>  
-  {% endfor %}
   </ol>
  
 <br><br><br>

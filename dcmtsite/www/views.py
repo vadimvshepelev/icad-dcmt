@@ -40,7 +40,7 @@ def contacts(request):
     return render(request, 'contacts.html', {'people': people})
 
 def researcher(request, researcher_slug):
-    researcher = Person.objects.get(slug=researcher_slug)
+    researcher = Person.objects.get(slug=researcher_slug)	
     papers = Paper.objects.filter(dcmt_authors=researcher)
     context = {'researcher_slug': researcher_slug, 'researcher': researcher, 'papers': papers }
     return render(request, 'researcher_card.html', context)
@@ -86,8 +86,9 @@ def contacts_en(request):
 
 def researcher_en(request, researcher_slug):
     researcher = Person.objects.get(slug=researcher_slug)
+	researcher_en = researcher.__str_en__()
     papers = Paper.objects.filter(dcmt_authors=researcher)
-    context = {'researcher_slug': researcher_slug, 'researcher': researcher, 'papers': papers }
+    context = {'researcher_slug': researcher_slug, 'researcher': researcher, 'researcher_en': researcher_en, 'papers': papers }
     return render(request, 'researcher_card_en.html', context)
 
 
