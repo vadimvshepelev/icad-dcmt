@@ -5,7 +5,7 @@ html {
 body {
     min-height:100%; 
     position:relative; 
-    padding-bottom:100px
+    padding-bottom:400px
 }
 
 .footer {
@@ -16,7 +16,7 @@ body {
 	
 	position: absolute; 
     left: 0 ; right: 0; bottom: 0; 
-    height:100px;
+    height:400px;
 }
 
 .header {
