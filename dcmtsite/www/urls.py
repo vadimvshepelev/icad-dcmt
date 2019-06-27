@@ -15,8 +15,8 @@ urlpatterns = [
     url(r'^en/$', views.index_en, name='home_en'),
     url(r'^en/research/$', views.research_en, name='research_en'),
 	url(r'^en/publications/$', views.publications_en, name='publications_en'),
-	url(r'^en/conferences/$', views.conferences_en), name='conferences_en',
-	url(r'^en/grants/$', views.grants_en), name='grants_en',
+	url(r'^en/conferences/$', views.conferences_en, name='conferences_en'),
+	url(r'^en/grants/$', views.grants_en, name='grants_en'),
 	url(r'^en/contacts/$', views.contacts_en, name='contacts_en'),
 	url(r'^en/people/$', views.people_en, name='people_en'),
 	url(r'^en/people/(?P<researcher_slug>[a-z]+)$', views.researcher_en), 
@@ -24,8 +24,8 @@ urlpatterns = [
 #    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
 
-#sitemaps = {
+sitemaps = {
 #	'people': PersonSitemap,
 #    'people_en': PersonSitemapEn,    
-#	'static': StaticSitemap,
-#}
+	'static': StaticSitemap,
+}
