@@ -7,6 +7,10 @@ from django.contrib.sitemaps.views import sitemap
 # from django.urls import path
 from .sitemaps import StaticViewSitemap
 
+sitemaps = {
+    'static': StaticViewSitemap,
+}
+
 urlpatterns = [ 
     url(r'^$', views.index, name='main'),
 	url(r'^research/$', views.research, name='research'),
