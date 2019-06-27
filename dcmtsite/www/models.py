@@ -1,6 +1,6 @@
 from django.db import models
-from Django.contrib.sitemaps import Sitemap 
-from django.core.urlresolvers import reverse
+# from Django.contrib.sitemaps import Sitemap 
+# from django.core.urlresolvers import reverse
 
 # Create your models here.
 
