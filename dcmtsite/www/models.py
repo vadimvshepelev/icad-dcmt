@@ -1,6 +1,6 @@
 from django.db import models
-from Django.contrib.sitemaps import Sitemap 
-from django.core.urlresolvers import reverse
+#from Django.contrib.sitemaps import Sitemap 
+#from django.core.urlresolvers import reverse
 
 # Create your models here.
 
@@ -27,7 +27,7 @@ class Person(models.Model):
         return self.name_en[0] + '.' + self.patronymic_en[0] + '. ' + self.family_name_en 
         
     def get_absolute_url(self):
-	    return "/people/%i" % self.slug       
+        return "/people/%i" % self.slug       
         
 
 #class PersonSitemap(Sitemap):
