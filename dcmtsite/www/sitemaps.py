@@ -20,6 +20,9 @@ class PersonSitemapRu(sitemaps.Sitemap):
 
     def items(self):
         return Person.objects.all()
+		
+    def location(self, item):    
+        return "/people/%s" % item.slug  
 
         
 class PersonSitemapEn(sitemaps.Sitemap):
@@ -30,4 +33,4 @@ class PersonSitemapEn(sitemaps.Sitemap):
         return Person.objects.all()
         
     def location(self, item):    
-        return "en/people/%s" % item.slug   
+        return "/en/people/%s" % item.slug   
