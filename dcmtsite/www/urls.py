@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from . import views
-from models import PersonSitemap, PersonSitemapEn, StaticSitemap
+# from models import PersonSitemap, PersonSitemapEn, StaticSitemap
+from models import StaticSitemap
 
 urlpatterns = [ 
     url(r'^$', views.index, name='home'),
@@ -24,7 +25,7 @@ urlpatterns = [
 ]
 
 sitemaps = {
-	'people': PersonSitemap,
-    'people_en': PersonSitemapEn,    
+#	'people': PersonSitemap,
+#    'people_en': PersonSitemapEn,    
 	'static': StaticSitemap,
 }

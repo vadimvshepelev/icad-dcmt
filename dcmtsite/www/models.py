@@ -30,22 +30,21 @@ class Person(models.Model):
 	    return "/people/%i" % self.slug       
         
 
-class PersonSitemap(Sitemap):
-	changefreq = "never"
-	priority = 0.5
-	
-	def items(self):
-		return Person.objects.all()
+#class PersonSitemap(Sitemap):
+	#changefreq = "never"
+	#priority = 0.5
+#	
+	#def items(self):
+	#	return Person.objects.all()
        
-class PersonSitemapEn(Sitemap):
-	changefreq = "never"
-	priority = 0.5
-	
-	def items(self):
-		return Person.objects.all()
-       
-
-	
+#class PersonSitemapEn(Sitemap):
+#	changefreq = "never"
+#	priority = 0.5
+#	
+#	def items(self):
+#		return Person.objects.all()
+ 
+ 
 class Paper(models.Model):
     authors = models.CharField(max_length=256) 
     title = models.CharField(max_length=256)
