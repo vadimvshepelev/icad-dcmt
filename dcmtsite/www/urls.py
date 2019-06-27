@@ -21,11 +21,11 @@ urlpatterns = [
 	url(r'^en/people/$', views.people_en, name='people_en'),
 	url(r'^en/people/(?P<researcher_slug>[a-z]+)$', views.researcher_en), 
 	url(r'^robots.txt$', views.robots_txt),
-    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+#    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
 
-sitemaps = {
+#sitemaps = {
 #	'people': PersonSitemap,
 #    'people_en': PersonSitemapEn,    
-	'static': StaticSitemap,
-}
+#	'static': StaticSitemap,
+#}

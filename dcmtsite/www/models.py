@@ -1,6 +1,6 @@
 from django.db import models
-from Django.contrib.sitemaps import Sitemap 
-from django.core.urlresolvers import reverse
+#from Django.contrib.sitemaps import Sitemap 
+#from django.core.urlresolvers import reverse
 
 # Create your models here.
 
@@ -83,15 +83,15 @@ class Paper(models.Model):
         return str
 
         
-class StaticSitemap(Sitemap):
-    priority = 0.6
-    changefreq = 'never'
-
-    def items(self):
-        return ['home', 'research', 'publications', 'conferences', 'grants', 'contacts', 'people', 
-                'home_en', 'research_en', 'publications_en', 'conferences_en', 'grants_en', 'contacts_en', 'people_en']
-
-    def location(self, item):
-        return reverse(item)
+#class StaticSitemap(Sitemap):
+#    priority = 0.6
+#    changefreq = 'never'
+#
+#    def items(self):
+#        return ['home', 'research', 'publications', 'conferences', 'grants', 'contacts', 'people', 
+#                'home_en', 'research_en', 'publications_en', 'conferences_en', 'grants_en', 'contacts_en', 'people_en']
+#
+#   def location(self, item):
+#       return reverse(item)
 
 	
