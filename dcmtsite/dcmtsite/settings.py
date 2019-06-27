@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','icad-dcmt.herokuapp.com','icad-dcmt.ru', 'icad-dcmt.arietsu.lclients.ru']
 
+SITE_ID = 2
+
 
 # Application definition
 
