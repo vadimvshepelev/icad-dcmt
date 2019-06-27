@@ -34,22 +34,22 @@
   {% for paper in papers %}
     <li> {{ paper.authors }}, <i>{{ paper.title }}</i>, 
     {% if paper.abs_link %}
-        <a href={{paper.abs_link}}>{{ paper.journal }}</a>. 
+        <a href={{paper.abs_link}} rel="nofollow">{{ paper.journal }}</a>. 
     {% else %}    
         {{ paper.journal }}. 
     {% endif %} 
     <p>
     {% if paper.wos_link %}
-        <a href={{paper.wos_link}} title="Ссылка на публикацию в Web of Science"><img src="{% static 'ico/wos.ico' %}" width="20" height = "20" alt="WOS"></a>
+        <a href={{paper.wos_link}} rel="nofollow" title="Ссылка на публикацию в Web of Science"><img src="{% static 'ico/wos.ico' %}" width="20" height = "20" alt="WOS"></a>
     {% endif %}
     {% if paper.scopus_link %}
-        <a href={{paper.scopus_link}} title="Ссылка на публикацию в Scopus"><img src="{% static 'ico/scopus.ico' %}" width="20" height = "20" alt="Scopus"></a> 
+        <a href={{paper.scopus_link}} rel="nofollow" title="Ссылка на публикацию в Scopus"><img src="{% static 'ico/scopus.ico' %}" width="20" height = "20" alt="Scopus"></a> 
     {% endif %}
     {% if paper.rinc_link %}
-        <a href={{paper.rinc_link}} title="Ссылка на публикацию в РИНЦ"><img src="{% static 'ico/rsci.ico' %}" width="20" height = "20" alt="РИНЦ"></a>
+        <a href={{paper.rinc_link}} rel="nofollow" title="Ссылка на публикацию в РИНЦ"><img src="{% static 'ico/rsci.ico' %}" width="20" height = "20" alt="РИНЦ"></a>
     {% endif %}
     {% if paper.download_link %}
-        <a href={{paper.download_link}} title="Скачать полный текст статьи в PDF"><img src="{% static 'ico/pdf-icon.ico' %}" width="20" height = "20" alt="PDF"></a>           
+        <a href={{paper.download_link}} rel="nofollow" title="Скачать полный текст статьи в PDF"><img src="{% static 'ico/pdf-icon.ico' %}" width="20" height = "20" alt="PDF"></a>           
     {% endif %}    
     </p>
     </li>  
