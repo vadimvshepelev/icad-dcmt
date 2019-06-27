@@ -21,7 +21,7 @@ class PersonSitemapRu(sitemaps.Sitemap):
     def items(self):
         return Person.objects.all()
 		
-	def location(self):
+    def location(self):
         return "/people/%s" % self.slug
 
         
