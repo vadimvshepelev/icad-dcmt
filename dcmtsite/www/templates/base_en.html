@@ -2,16 +2,9 @@
 <html lang='ru'>
   <head>
 {% load staticfiles %}
-    <title>
-{% block title %}
-Department of Computational Methods and Turbulence of ICAD RAS 
-{% endblock %}
-    </title>   
-    <meta name="description" content="
-{% block meta-description %} 
-Numerical simulation of continuum mechanics problems using modern methods and technologies. Fundamental and applied research.
-{% endblock %}    
-    " />
+    <title>{% block title %}Department of Computational Methods and Turbulence of ICAD RAS{% endblock %}</title>   
+    <meta name="description" content="{% block meta_description %} Numerical simulation of continuum mechanics problems using modern methods and technologies. 
+    Fundamental and applied research.{% endblock %}" />
     <meta charset="utf-8">
     <!--<link href='css/bootstrap.min.css' rel = 'stylesheet'/>-->
 	<link href="{% static 'css/bootstrap.min.css'%}" rel = 'stylesheet'/>
