@@ -4,7 +4,7 @@ from .models import Person
 
 class StaticViewSitemap(sitemaps.Sitemap):
     priority = 0.5
-    changefreq = 'never'
+    changefreq = 'daily'
 
     def items(self):
         return ['main', 'research', 'publications', 'people', 'conferences', 'grants', 'contacts', 
@@ -20,9 +20,6 @@ class PersonSitemapRu(sitemaps.Sitemap):
 
     def items(self):
         return Person.objects.all()
-		
-    def location(self):
-        return "/people/%s" % self.slug
 
         
 class PersonSitemapEn(sitemaps.Sitemap):
@@ -32,5 +29,5 @@ class PersonSitemapEn(sitemaps.Sitemap):
     def items(self):
         return Person.objects.all()
         
-    def location(self):    
+    def locate(self):    
         return "en/people/%s" % self.slug   
