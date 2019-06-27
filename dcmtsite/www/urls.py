@@ -24,8 +24,8 @@ urlpatterns = [
 #    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
 
-sitemaps = {
+#sitemaps = {
 #	'people': PersonSitemap,
 #    'people_en': PersonSitemapEn,    
-	'static': StaticSitemap,
-}
+#	'static': StaticSitemap,
+#}
