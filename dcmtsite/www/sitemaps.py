@@ -20,3 +20,14 @@ class PersonSitemapRu(sitemaps.Sitemap):
 
     def items(self):
         return Person.objects.all()
+
+        
+class PersonSitemapEn(sitemaps.Sitemap):
+    changefreq = "never"
+    priority = 0.5
+
+    def items(self):
+        return Person.objects.all()
+        
+    def locate(self):    
+        return "en/people/%s" % self.slug   
