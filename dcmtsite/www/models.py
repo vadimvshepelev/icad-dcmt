@@ -27,7 +27,7 @@ class Person(models.Model):
         return self.name_en[0] + '.' + self.patronymic_en[0] + '. ' + self.family_name_en 
         
     def get_absolute_url(self):
-        return "/people/%i" % self.slug       
+        return "/people/%s" % self.slug       
         
 
 #class PersonSitemap(Sitemap):
