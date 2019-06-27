@@ -1,4 +1,4 @@
-/* // Trick  #1 for sticky footer from https://css-tricks.com/couple-takes-sticky-footer/
+/* Trick  #1 for sticky footer from https://css-tricks.com/couple-takes-sticky-footer/ */
 
 html { 
     height: 100%;  
@@ -13,12 +13,12 @@ body {
 .footer {
 	color: #EDECEC;              /* // Color settings, don't matter for stickyness*/
 	background-color: #363636;	 /* // Color settings, don't matter for stickyness	*/
-	/*position: absolute; 
-    left: 0 ; right: 0; bottom: 0; 
-    height:400px;*/
+	position: absolute; 
+    left: 0; right: 0; bottom: 0; 
+    height: 130 px;
 }
 
-/*// The end of the trick*/
+/* The end of the trick*/
 
 
 .header {
