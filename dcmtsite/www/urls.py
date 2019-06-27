@@ -1,8 +1,8 @@
 from django.conf.urls import url
 from . import views
 # from models import PersonSitemap, PersonSitemapEn, StaticSitemap
-from .models import StaticSitemap
-#from .models import *
+# from .models import StaticSitemap
+# from .models import *
 
 
 urlpatterns = [ 
