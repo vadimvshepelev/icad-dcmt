@@ -15,7 +15,7 @@ body {
 	background-color: #363636;	 /* // Color settings, don't matter for stickyness	*/
 	position: absolute; 
     left: 0; right: 0; bottom: 0; 
-    height: 130 px;
+    height: 400 px;
 }
 
 /* The end of the trick*/
