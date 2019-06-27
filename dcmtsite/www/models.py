@@ -1,4 +1,6 @@
 from django.db import models
+from Django.contrib.sitemaps import Sitemap 
+from django.core.urlresolvers import reverse
 
 # Create your models here.
 
@@ -17,11 +19,32 @@ class Person(models.Model):
     position_en = models.CharField(max_length=40, default='Position')
 	
     slug = models.SlugField()
+    
     def __str__(self):
         return self.name[0] + '.' + self.patronymic[0] + '. ' + self.family_name 
 	
     def __str_en__(self):
         return self.name_en[0] + '.' + self.patronymic_en[0] + '. ' + self.family_name_en 
+        
+    def get_absolute_url(self):
+	    return "/people/%i" % self.slug       
+        
+
+class PersonSitemap(Sitemap):
+	changefreq = "never"
+	priority = 0.5
+	
+	def items(self):
+		return Person.objects.all()
+       
+class PersonSitemapEn(Sitemap):
+	changefreq = "never"
+	priority = 0.5
+	
+	def items(self):
+		return Person.objects.all()
+       
+
 	
 class Paper(models.Model):
     authors = models.CharField(max_length=256) 
@@ -59,4 +82,17 @@ class Paper(models.Model):
         words_list = self.authors.split()[:4] + ["..."] + self.title.split()[:4] 
         str = ' '.join(words_list) + "..."
         return str
+
+        
+class StaticSitemap(Sitemap):
+    priority = 0.6
+    changefreq = 'never'
+
+    def items(self):
+        return ['home', 'research', 'publications', 'conferences', 'grants', 'contacts', 'people', 
+                'home_en', 'research_en', 'publications_en', 'conferences_en', 'grants_en', 'contacts_en', 'people_en']
+
+    def location(self, item):
+        return reverse(item)
+
 	
