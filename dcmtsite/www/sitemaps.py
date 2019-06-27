@@ -29,5 +29,5 @@ class PersonSitemapEn(sitemaps.Sitemap):
     def items(self):
         return Person.objects.all()
         
-    def locate(self):    
-        return "en/people/%s" % self.slug   
+    def location(self, item):    
+        return "en/people/%s" % item.slug   
