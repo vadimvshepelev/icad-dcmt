@@ -1,5 +1,6 @@
 from django.contrib import sitemaps
 from django.urls import reverse
+from .models import Person
 
 class StaticViewSitemap(sitemaps.Sitemap):
     priority = 0.5
@@ -11,3 +12,11 @@ class StaticViewSitemap(sitemaps.Sitemap):
 
     def location(self, item):
         return reverse(item)
+
+        
+class PersonSitemapRu(sitemaps.Sitemap):
+    changefreq = "never"
+    priority = 0.5
+
+    def items(self):
+        return Person.objects.all()

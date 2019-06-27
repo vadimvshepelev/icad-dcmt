@@ -5,10 +5,11 @@ from . import views
 # from .models import *
 from django.contrib.sitemaps.views import sitemap
 # from django.urls import path
-from .sitemaps import StaticViewSitemap
+from .sitemaps import StaticViewSitemap, PersonSitemapRu
 
 sitemaps = {
     'static': StaticViewSitemap,
+    'people_ru': PersonSitemapRu,
 }
 
 urlpatterns = [ 
