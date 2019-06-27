@@ -4,7 +4,7 @@ from . import views
 # from .models import StaticSitemap
 # from .models import *
 from django.contrib.sitemaps.views import sitemap
-from django.urls import path
+# from django.urls import path
 from .sitemaps import StaticViewSitemap
 
 urlpatterns = [ 
@@ -26,7 +26,7 @@ urlpatterns = [
 	url(r'^en/people/(?P<researcher_slug>[a-z]+)$', views.researcher_en), 
 	url(r'^robots.txt$', views.robots_txt),
 #    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
+    url(r'sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
 ]
 
 #sitemaps = {
