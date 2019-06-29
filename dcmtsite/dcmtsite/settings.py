@@ -141,11 +141,28 @@ LOGGING = {
             'class': 'django.utils.log.AdminEmailHandler',
             'include_html': True,
         },
+		 'console': {
+            'class': 'logging.StreamHandler',
+        },
+		'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '~/projects/icad-dcmt/debug.log',
+        },
     },
     'loggers': {
         '': {
             'handlers': ['console', 'mail_admins'],
             'level': 'INFO',
+        },
+		'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+        },
+		'django.request': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
         },
     },
 }
