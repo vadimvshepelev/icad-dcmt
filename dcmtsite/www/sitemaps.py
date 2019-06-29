@@ -15,7 +15,7 @@ class StaticViewSitemap(sitemaps.Sitemap):
 
         
 class PersonSitemapRu(sitemaps.Sitemap):
-    changefreq = "never"
+    changefreq = "daily"
     priority = 0.5
 
     def items(self):
@@ -26,7 +26,7 @@ class PersonSitemapRu(sitemaps.Sitemap):
 
         
 class PersonSitemapEn(sitemaps.Sitemap):
-    changefreq = "never"
+    changefreq = "daily"
     priority = 0.5
 
     def items(self):
