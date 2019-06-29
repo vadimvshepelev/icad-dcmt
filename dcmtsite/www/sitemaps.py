@@ -34,3 +34,9 @@ class PersonSitemapEn(sitemaps.Sitemap):
         
     def location(self, item):    
         return "/en/people/%s" % item.slug   
+		
+sitemaps = {
+    'static': StaticViewSitemap,
+    'people_ru': PersonSitemapRu,
+    'people_en': PersonSitemapEn,    
+}s

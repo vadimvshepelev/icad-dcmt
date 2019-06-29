@@ -1,17 +1,8 @@
 from django.conf.urls import url
 from . import views
-# from models import PersonSitemap, PersonSitemapEn, StaticSitemap
-# from .models import StaticSitemap
-# from .models import *
 from django.contrib.sitemaps.views import sitemap
-# from django.urls import path
-from .sitemaps import StaticViewSitemap, PersonSitemapRu, PersonSitemapEn
+from .sitemaps import sitemaps
 
-sitemaps = {
-    'static': StaticViewSitemap,
-    'people_ru': PersonSitemapRu,
-    'people_en': PersonSitemapEn,    
-}
 
 urlpatterns = [ 
     url(r'^$', views.index, name='main'),
@@ -31,12 +22,5 @@ urlpatterns = [
 	url(r'^en/people/$', views.people_en, name='people_en'),
 	url(r'^en/people/(?P<researcher_slug>[a-z]+)$', views.researcher_en), 
 	url(r'^robots.txt$', views.robots_txt),
-#    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-    url(r'sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
+    url(r'sitemap.xml', sitemap, {'sitemaps': sitemaps.sitemaps}, name='django.contrib.sitemaps.views.sitemap')
 ]
-
-#sitemaps = {
-#	'people': PersonSitemap,
-#    'people_en': PersonSitemapEn,    
-#	'static': StaticSitemap,
-#}
