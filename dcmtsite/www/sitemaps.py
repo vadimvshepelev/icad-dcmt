@@ -39,4 +39,4 @@ sitemaps = {
     'static': StaticViewSitemap,
     'people_ru': PersonSitemapRu,
     'people_en': PersonSitemapEn,    
-}s
+}
