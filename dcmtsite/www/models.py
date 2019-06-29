@@ -1,8 +1,5 @@
 from django.db import models
-from django.contrib.sitemaps import Sitemap 
-from django.core.urlresolvers import reverse
 
-# Create your models here.
 
 class Person(models.Model):
     name = models.CharField(max_length=40)
@@ -29,6 +26,7 @@ class Person(models.Model):
     def get_absolute_url(self):
         return "/people/%s" % self.slug       
         
+		
 class Paper(models.Model):
     authors = models.CharField(max_length=256) 
     title = models.CharField(max_length=256)
