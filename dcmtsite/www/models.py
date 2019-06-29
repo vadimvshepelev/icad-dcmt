@@ -29,34 +29,10 @@ class Person(models.Model):
     def get_absolute_url(self):
         return "/people/%s" % self.slug       
         
-
-#class PersonSitemap(Sitemap):
-	#changefreq = "never"
-	#priority = 0.5
-#	
-	#def items(self):
-	#	return Person.objects.all()
-       
-#class PersonSitemapEn(Sitemap):
-#	changefreq = "never"
-#	priority = 0.5
-#	
-#	def items(self):
-#		return Person.objects.all()
- 
- 
 class Paper(models.Model):
     authors = models.CharField(max_length=256) 
     title = models.CharField(max_length=256)
     journal = models.CharField(max_length=256)
- 	#dcmt_author_1 = models.CharField(max_length=40)
-	#dcmt_author_2 = models.CharField(max_length=40, blank=True)
-	#dcmt_author_3 = models.CharField(max_length=40, blank=True)
-	#dcmt_author_4 = models.CharField(max_length=40, blank=True)
-	#dcmt_author_5 = models.CharField(max_length=40, blank=True)
-	#dcmt_author_6 = models.CharField(max_length=40, blank=True)
-	#dcmt_author_7 = models.CharField(max_length=40, blank=True)
-	#dcmt_author_8 = models.CharField(max_length=40, blank=True)    
     dcmt_authors = models.ManyToManyField(Person);
     abs_link = models.CharField(max_length=256, blank=True)
     rinc_link = models.CharField(max_length=256, blank=True)
@@ -81,15 +57,3 @@ class Paper(models.Model):
         words_list = self.authors.split()[:4] + ["..."] + self.title.split()[:4] 
         str = ' '.join(words_list) + "..."
         return str
-
-        
-#class StaticSitemap(Sitemap):
-#    priority = 0.6
-#    changefreq = 'never'
-#
-#    def items(self):
-#        return ['home', 'research', 'publications', 'conferences', 'grants', 'contacts', 'people', 
-#                'home_en', 'research_en', 'publications_en', 'conferences_en', 'grants_en', 'contacts_en', 'people_en']
-#
-#   def location(self, item):
-#       return reverse(item)
