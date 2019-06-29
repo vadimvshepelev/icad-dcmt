@@ -132,4 +132,20 @@ STATICFILES_DIRS = (
 
 SECURE_SSL_REDIRECT = True
 
-
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console', 'mail_admins'],
+            'level': 'INFO',
+        },
+    },
+}
