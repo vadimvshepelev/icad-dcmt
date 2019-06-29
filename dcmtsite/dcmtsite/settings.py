@@ -129,4 +129,6 @@ STATICFILES_DIRS = (
     BASE_DIR + '/www/static',
 )
 
+SECURE_SSL_REDIRECT = True
+
 
