@@ -28,7 +28,7 @@ body {
  .header a {
     display: block; /* Ссылка как блочный элемент */
     /*height: 100%; /* Высота на весь слой */
-    color: grey; /* Цвет ссылки */
+    color: #333; /* Цвет ссылки */
  }
  
  .header a:hover {
