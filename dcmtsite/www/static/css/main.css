@@ -31,6 +31,12 @@ body {
     height: 100%; /* Высота на весь слой */
      color: #666; /* Цвет ссылки */
  }
+ 
+ .header a:hover {
+    color: black; /* Цвет ссылки */
+	text-decoration: none;
+ }
+ 
 
 .dash {
     text-decoration: none; /* Убираем подчеркивание */
