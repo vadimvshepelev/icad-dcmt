@@ -29,8 +29,8 @@ body {
     display: block; /* Ссылка как блочный элемент */
     text-align: center; /* Выравнивание по центру */
     height: 100%; /* Высота на весь слой */
-     color: black; /* Цвет ссылки */
-}
+     color: #666; /* Цвет ссылки */
+ }
 
 .dash {
     text-decoration: none; /* Убираем подчеркивание */
