@@ -28,11 +28,11 @@ body {
  .header a {
     display: block; /* Ссылка как блочный элемент */
     /*height: 100%; /* Высота на весь слой */
-    color: black; /* Цвет ссылки */
+    /*color: black; /* Цвет ссылки */
  }
  
  .header a:hover {
-    color: black; /* Цвет ссылки */
+    /*color: black; /* Цвет ссылки */
 	text-decoration: none;
  }
  
