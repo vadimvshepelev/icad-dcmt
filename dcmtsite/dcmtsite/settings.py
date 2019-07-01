@@ -32,9 +32,6 @@ ALLOWED_HOSTS = ['127.0.0.1',
                  'icad-dcmt.arietsu.lclients.ru',
                  'mozart.arietsu.lclients.ru']
 
-SITE_ID = 2
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -135,4 +132,8 @@ STATICFILES_DIRS = (
     BASE_DIR + '/www/static',
 )
 
-SECURE_SSL_REDIRECT = True
+from local_settings.py import *
+
+
+
+
