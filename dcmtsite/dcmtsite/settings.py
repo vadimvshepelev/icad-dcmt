@@ -132,7 +132,7 @@ STATICFILES_DIRS = (
     BASE_DIR + '/www/static',
 )
 
-from local_settings.py import *
+from .local_settings import *
 
 
 
