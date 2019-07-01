@@ -23,6 +23,7 @@ body {
 
 .header {
 	background-color: #eee;
+	display: block;
 }
 
 .dash {
