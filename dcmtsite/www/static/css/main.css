@@ -8,9 +8,14 @@ html {
 }
 
 body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.6;
+    
     min-height:100%; 
     position:relative; 
-    padding-bottom:400px;
+    padding-bottom:400px;   
 }
 
 .footer {
@@ -84,6 +89,7 @@ h6 {
 <h1 class="align-center mbr-bold mbr-white pb-3 mbr-fonts-style display-1">BOOTSTRAP BLOG TEMPLATE</h1>
 <h3 class="mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style display-5">Make your own bootstrap blog in minutes!&nbsp;</h3>
                 
+<div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Proin id eros arcu. Integ...                
 */
 
 /* Settings from the template css'es */
@@ -92,6 +98,11 @@ h6 {
 
 .mbr-bold {
   font-weight: 700; }
+}
+
+.mbr-text {
+  font-style: normal;
+  line-height: 1.6;
 }
 
 .mbr-white {
@@ -105,6 +116,11 @@ h6 {
 .display-5 {
   font-family: 'Rubik', sans-serif;
   font-size: 1.5rem;
+}
+
+.display-7 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
 }
 
 .mbr-section-subtitle {
@@ -129,4 +145,12 @@ h6 {
     font-weight: 300;    
     color: #ffffff;
 }
+
+.dcmt-text {    
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.6;
+}
+
 /* End of my settings*/
