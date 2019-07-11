@@ -36,13 +36,13 @@ body {
 	background-color: #333;
 }
 
- .header a {
+ .header .logo a {
     display: block; /* Ссылка как блочный элемент */
     /*height: 100%; /* Высота на весь слой */
     color: #333; /* Цвет ссылки */
  }
  
- .header a:hover {
+ .header .logo a:hover {
     /*color: black; /* Цвет ссылки */
 	text-decoration: none;
  }
