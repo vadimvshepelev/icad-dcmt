@@ -241,7 +241,9 @@ nav a {
     color: #ffffff  
 }
 
-
+ nav a:hover {
+    text-decoration: none;
+ }
 
 
 
