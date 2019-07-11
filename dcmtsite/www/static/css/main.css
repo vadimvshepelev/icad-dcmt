@@ -48,7 +48,7 @@ body {
 	text-decoration: none;
  }
  
- header:after{
+ .header:after{
     content: '';
     position: absolute;
     top: 0;
