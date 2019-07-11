@@ -48,6 +48,7 @@ body {
 	text-decoration: none;
  }
  
+ /*
  .header:after{
     content: '';
     position: absolute;
@@ -58,7 +59,7 @@ body {
     background: black;
     opacity: 0.5;
     z-index: 1;
-}
+}*/
 
 .dash {
     text-decoration: none; /* Убираем подчеркивание */
