@@ -219,10 +219,13 @@ nav a {
     height: 100%;
     margin-top: 8px;
 	padding: 21px 20px;
-	font-size: 17px;
+	font-size: 1rem;
 	line-height: normal;
 	letter-spacing: normal;
-  color: #fff;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff  
 }
 
 
