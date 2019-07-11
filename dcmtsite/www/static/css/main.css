@@ -174,10 +174,68 @@ h6 {
     color: #ffffff/* !important*/;
 }
 
-.nav a {
-    display: block; /* Ссылка как блочный элемент */
-    /*height: 100%; /* Высота на весь слой */
-    color: #333; /* Цвет ссылки */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.nav a {
+    display: block; 
+    /*height: 100%; 
+    color: #333; 
+}*/
+
+
+
+
+
+nav {
+  font-size: 0;
+	line-height: 0;
+	letter-spacing: -1px;
 }
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+	display: block;
+  background: #000;
+	padding: 0 10px;
+	font-size: 17px;
+	line-height: normal;
+	letter-spacing: normal;
+  color: #fff;
+}
+
+nav li:nth-child(2n) a {
+  background: #666;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* End of my settings*/
