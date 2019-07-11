@@ -110,10 +110,21 @@ h6 {
 
 .mbr-white {
   color: #ffffff; }
+  
+ .text-white {
+  color: #ffffff !important;
+}
+  
+  
 
 .display-1 {
   font-family: 'Rubik', sans-serif;
   font-size: 4.25rem;
+}
+
+.display-4 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
 }
 
 .display-5 {
@@ -154,6 +165,14 @@ h6 {
     font-size: 1rem;
     font-style: normal;
     line-height: 1.6;
+}
+
+.menu-text {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff /*!important*/;
+    
 }
 
 /* End of my settings*/
