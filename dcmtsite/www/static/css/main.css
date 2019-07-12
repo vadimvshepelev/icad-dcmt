@@ -244,6 +244,7 @@ nav a {
 }
 
  nav a:hover {
+    text-decoration-color: rgb(179, 179, 179);
     text-decoration: none;
  }
 
