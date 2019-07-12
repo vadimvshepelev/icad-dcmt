@@ -258,16 +258,6 @@ nav a {
 .navbar-inverse .navbar-nav >
     color: #ffffff;
 }
- 
-.dropdown:hover > .dropdown-menu { 
-    display: block; 
-}
-
-/*
-.navbar-default .navbar-nav > li > a:hover > .dropdown-menu{
-	display: block; 
-}
-*/
 
 li.dropdown:hover > .dropdown-menu {
 	display: block; 
