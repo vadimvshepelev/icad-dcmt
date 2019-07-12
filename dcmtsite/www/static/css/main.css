@@ -34,7 +34,7 @@ body {
 
 .header {
 	background-color: #333;
-    background-image: 
+    "background-image: url({../'light-tornado.jpg' %});"
 }
 
  .header .logo a {
