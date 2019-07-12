@@ -245,8 +245,8 @@ nav a {
     text-decoration: none;
  }
 
-navbar-default .navbar-nav > li > a {
-     color: #ffffff;
+.navbar-inverse .navbar-nav >
+    color: #ffffff;
 }
  
 .dropdown:hover > .dropdown-menu { 
