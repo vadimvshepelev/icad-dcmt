@@ -188,7 +188,7 @@ h6 {
 }
 
 a.dcmt-menu-text:hover {
-    text-decoration-color: rgb(179, 179, 179)!important; /* Убираем подчеркивание */
+    color: rgb(179, 179, 179)!important; /* Убираем подчеркивание */
 }
 
 
