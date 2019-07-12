@@ -249,7 +249,9 @@ nav a {
     display: block; 
 }
 
-
+.navbar {
+    background-color: rgba(255, 255, 255, 0);
+}
 
 
 
