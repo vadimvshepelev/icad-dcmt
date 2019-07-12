@@ -249,8 +249,9 @@ nav a {
     display: block; 
 }
 
-
-
+.navbar {
+    background-color: transparent;
+}
 
 
 
