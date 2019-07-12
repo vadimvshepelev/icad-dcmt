@@ -254,6 +254,10 @@ nav a {
  nav a:hover {
     text-decoration: none;
  }
+ 
+  nav a:active {
+    color: rgb(179, 179, 179);
+ }
 
 .navbar-inverse .navbar-nav >
     color: #ffffff;
