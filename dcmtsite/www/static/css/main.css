@@ -37,27 +37,6 @@ body {
     background-image: url(../light-tornado.jpg);
 }
 
-
-
-
-.header-wrapper {
-    opacity: 0.5;
-}
-
-.header-overlay {
-  background-color: #000;
-  bottom: 0;
-  left: 0;
-  opacity: .5;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 0;
-}
-
-
-
-
  .header .logo a {
     display: block; /* Ссылка как блочный элемент */
     /*height: 100%; /* Высота на весь слой */
@@ -276,10 +255,6 @@ nav a {
     text-decoration: none;
  }
  
-  nav a:active {
-    color: rgb(179, 179, 179);
- }
-
 .navbar-inverse .navbar-nav >
     color: #ffffff;
 }
