@@ -254,6 +254,10 @@ nav a {
     border: transparent;
 }
 
+.nav-item {
+    background-color: transparent;    
+}
+
 
 
 /* End of my settings*/
