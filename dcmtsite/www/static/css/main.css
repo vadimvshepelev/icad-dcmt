@@ -188,11 +188,11 @@ h6 {
 }
 
 a.dcmt-menu-text:hover {
-    color: rgb(179, 179, 179)!important; /* Убираем подчеркивание */
+    color: rgb(179, 179, 179)!important; 
 }
 
 ul.dropdown-menu {
-	backgrounf-color: rgb(35, 35, 35);
+	background-color: rgb(35, 35, 35);
 }
 
 
