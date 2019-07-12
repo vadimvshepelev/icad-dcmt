@@ -258,7 +258,7 @@ nav a {
     background-color: transparent;    
 }
 
-.navbar-nav > li > .dropdown-menu { 
+.navbar-nav > li a { 
     background-color: rgb(51, 51, 51); 
     line-height: 1.6;
     padding: 3px 24px 3px 24 px;
