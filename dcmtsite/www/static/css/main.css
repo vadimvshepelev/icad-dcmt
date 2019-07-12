@@ -257,6 +257,10 @@ nav a {
     display: block; 
 }
 
+li.dropdown-item {
+    background-color: rgb(51, 51, 51); 
+}
+
 .navbar {
     background-color: transparent;
     border: transparent;
