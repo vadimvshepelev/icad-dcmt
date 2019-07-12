@@ -245,7 +245,9 @@ nav a {
     text-decoration: none;
  }
 
-
+.dropdown:hover > .dropdown-menu { 
+    display: block; 
+}
 
 
 
