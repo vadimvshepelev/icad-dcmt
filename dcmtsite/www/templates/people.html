@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block content %}
-<h1>Сотрудники отдела</h1>
+<h1>СОТРУДНИКИ ОТДЕЛА</h1>
 <ul>
 {% for p in people%}
 <li><a href='/people/{{ p.slug }}'>{{ p.name }} {{ p.patronymic }} {{ p.family_name }}</a></li>
