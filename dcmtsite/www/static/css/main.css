@@ -304,6 +304,7 @@ blockquote {
     position: relative;
     border-color: #149dcc;
     border-width: 3px;
+    margin-top: 2rem;
     margin-bottom: 2.3125rem;
 }
 
