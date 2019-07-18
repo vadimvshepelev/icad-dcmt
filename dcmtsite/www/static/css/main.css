@@ -150,7 +150,7 @@ ul.dropdown-menu {
 }
     
 .dcmt-overlay {
-    bottom: inherit;
+    bottom: 0;
     left: 0;
     opacity: .5;
     position: absolute;
