@@ -148,10 +148,9 @@ ul.dropdown-menu {
     color: rgb(179, 179, 179)!important; 	
 	background-color: transparent;
 }
-
-    background-color: #000;
+    
 .dcmt-overlay {
-    bottom: auto;
+    bottom: inherit;
     left: 0;
     opacity: .5;
     position: absolute;
