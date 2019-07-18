@@ -152,7 +152,7 @@ ul.dropdown-menu {
 .dcmt-overlay {
     bottom: 80%;
     left: 0;
-    opacity: .5;
+    opacity: .35;
     position: absolute;
     right: 0;
     top: 0;
