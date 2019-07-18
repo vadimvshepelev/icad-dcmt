@@ -41,13 +41,18 @@ body {
 	background-color: #333;
     background-image: url(../light-tornado.jpg);
 	position: relative;
+	/* Невыделяемый текст:*/
+	-moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
  .header .logo a {
     display: block; /* Ссылка как блочный элемент */
     /*height: 100%; /* Высота на весь слой */
     color: #333; /* Цвет ссылки */
-	text-align: center;
+	text-align: center;	
  }
  
  .header .logo a:hover {
@@ -241,15 +246,6 @@ ul.dropdown-menu {
   float: left !important;
 }
 
-/*
-.navbar-nav.navbar-right:last-child {
-  margin-right: -15px !important;
-}
-
-.navbar-right {
-  float: right!important;
-}
-*/
 
 
 
