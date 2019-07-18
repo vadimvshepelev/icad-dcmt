@@ -25,7 +25,7 @@ body {
 	color: #EDECEC; 	
 	position: absolute; 
     left: 0; right: 0; bottom: 0; 
-    height: 100%;
+    min-height: 50px;
 	text-align: center;
 	font-family: 'Rubik', sans-serif;
     font-size: 1rem;
