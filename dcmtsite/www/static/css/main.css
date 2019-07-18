@@ -232,3 +232,8 @@ blockquote {
     margin-top: 2rem;
     margin-bottom: 2.3125rem;
 }
+
+.col-md-8 {
+	padding-right: 15px;
+	padding-left: 15px;
+}
