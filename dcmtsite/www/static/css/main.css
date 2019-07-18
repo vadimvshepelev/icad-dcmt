@@ -150,12 +150,13 @@ ul.dropdown-menu {
 }
     
 .dcmt-overlay {
-    bottom: 80%;
+    /*bottom: 80%;*/	
     left: 0;
     opacity: .35;
     position: absolute;
     right: 0;
     top: 0;
+	height: 100%;
     z-index: 0;
 	background-color: rgb(35, 35, 35);
 }
