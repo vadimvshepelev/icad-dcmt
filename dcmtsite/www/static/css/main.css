@@ -36,6 +36,7 @@ body {
 .header {
 	background-color: #333;
     background-image: url(../light-tornado.jpg);
+	position: relative;
 }
 
  .header .logo a {
@@ -153,7 +154,7 @@ ul.dropdown-menu {
     bottom: 0;
     left: 0;
     opacity: .35;
-    position: relative;
+    position: absolute;
     right: 0;
     top: 0;
 	/*height: 100%;*/
