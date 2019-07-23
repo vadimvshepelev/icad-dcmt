@@ -39,7 +39,7 @@ body {
 
 .header {
 	background-color: #333;
-    background-image: url(../light-tornado.jpg);
+    background-image: url(../img/light-tornado.jpg);
 	position: relative;
 	/* Невыделяемый текст:*/
 	-moz-user-select: none;
