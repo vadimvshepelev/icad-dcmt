@@ -41,7 +41,7 @@ def contacts(request):
 
 def researcher(request, researcher_slug):
     researcher = Person.objects.get(slug=researcher_slug)	
-    papers = Paper.objects.filter(dcmt_authors=researcher)
+    papers = Paper.objects.filter(dcmt_authors=researcher).reverse()
     context = {'researcher_slug': researcher_slug, 'researcher': researcher, 'papers': papers }
     return render(request, 'researcher_card.html', context)
 
