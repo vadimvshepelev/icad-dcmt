@@ -21,6 +21,7 @@ urlpatterns = [
 	url(r'^en/contacts/$', views.contacts_en, name='contacts_en'),
 	url(r'^en/people/$', views.people_en, name='people_en'),
 	url(r'^en/people/(?P<researcher_slug>[a-z]+)$', views.researcher_en), 
-	url(r'^robots.txt$', views.robots_txt),
-    url(r'sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
+	# url(r'^robots.txt$', views.robots_txt),
+    url(r'sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    url(r'^robots.txt$', 'django.views.static.serve', {'path':"/robots.txt",'document_root': settings.MEDIA_ROOT,'show_indexes': False }),
 ]
