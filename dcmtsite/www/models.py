@@ -29,9 +29,9 @@ class Person(models.Model):
 		
 class Paper(models.Model):
     date = models.DateField(auto_now_add=True)
-    authors = models.TextField(max_length=256, verbose_name=u'Авторы') 
+    authors = models.TextField(max_length=256) 
     title = models.TextField(max_length=256)
-    journal = models.TextField(max_length=256)
+    journal = models.TextField(max_length=256, verbose_name='Journal, Volume, Pages')
     dcmt_authors = models.ManyToManyField(Person);
     abs_link = models.CharField(max_length=256, blank=True)
     rinc_link = models.CharField(max_length=256, blank=True)
