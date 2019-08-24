@@ -51,6 +51,9 @@ class Paper(models.Model):
         (OTHER, 'other')
     )
     type = models.CharField(max_length=3, choices = TYPE_CHOICES, default = ARTICLE)
+	
+	class Meta:
+        ordering = ['-date',]
     
     def __str__(self):
         words_list = self.authors.split()[:4] + ["..."] + self.title.split()[:4] 
