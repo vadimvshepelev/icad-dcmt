@@ -52,7 +52,7 @@ class Paper(models.Model):
     )
     type = models.CharField(max_length=3, choices = TYPE_CHOICES, default = ARTICLE)
 	
-	class Meta:
+    class Meta:
         ordering = ['-date',]
     
     def __str__(self):
