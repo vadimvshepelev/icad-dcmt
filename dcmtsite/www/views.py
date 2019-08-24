@@ -18,7 +18,7 @@ def publications(request):
     #year_oldest = 2000
     #year_cur = date.today().year
     #years = range(year_oldest, year_cur+1)
-    papers = Paper.objects.all().order_by('date')
+    papers = Paper.objects.all().order_by(-'date')
     context = {'people': people, 
                'papers': papers}
     return render(request, 'publications.html', context)
