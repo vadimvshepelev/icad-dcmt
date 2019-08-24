@@ -1,5 +1,5 @@
 from django.db import models
-from django import datetime as dt
+import datetime as dt
 
 
 class Person(models.Model):
