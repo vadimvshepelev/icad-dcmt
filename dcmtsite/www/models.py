@@ -28,7 +28,8 @@ class Person(models.Model):
         
 		
 class Paper(models.Model):
-    authors = models.TextField(max_length=256) 
+    date = models.DateField(auto_now_add=True)
+    authors = models.TextField(max_length=256, verbose_name='Авторы') 
     title = models.TextField(max_length=256)
     journal = models.TextField(max_length=256)
     dcmt_authors = models.ManyToManyField(Person);
