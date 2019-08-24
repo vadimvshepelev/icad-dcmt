@@ -31,13 +31,13 @@ class Paper(models.Model):
     date = models.DateField(auto_now_add=False, editable=True, blank=True)
     authors = models.TextField(max_length=256) 
     title = models.TextField(max_length=256)
-    journal = models.TextField(max_length=256, verbose_name='Journal, Volume, Pages')
-    dcmt_authors = models.ManyToManyField(Person);
-    abs_link = models.CharField(max_length=256, blank=True)
-    rinc_link = models.CharField(max_length=256, blank=True)
-    scopus_link = models.CharField(max_length=256, blank=True)
-    wos_link = models.CharField(max_length=256, blank=True)
-    download_link = models.CharField(max_length=256, blank=True)
+    journal = models.TextField(max_length=256, verbose_name='Journal, Volume, Pages etc.')
+    dcmt_authors = models.ManyToManyField(Person, verbose_name='Authors from DCM&T');
+    abs_link = models.CharField(max_length=256, blank=True, verbose_name='Abstract URL')
+    rinc_link = models.CharField(max_length=256, blank=True, verbose_name='RINC citing URL')
+    scopus_link = models.CharField(max_length=256, blank=True, verbose_name='Scopus citing URL')
+    wos_link = models.CharField(max_length=256, blank=True, verbose_name='Web of Science citing URL')
+    download_link = models.CharField(max_length=256, blank=True, verbose_name='Download URL')
     ARTICLE = 'ART'
     CONF_PROC = 'CPR'
     MONOGRAPHY = 'MNG'
@@ -50,7 +50,7 @@ class Paper(models.Model):
          (PREPRINT, 'preprint'),
         (OTHER, 'other')
     )
-    type = models.CharField(max_length=3, choices = TYPE_CHOICES, default = ARTICLE)    
+    type = models.CharField(max_length=3, choices = TYPE_CHOICES, default = ARTICLE, verbose_name='Paper type')    
     
     def __str__(self):
         words_list = self.authors.split()[:4] + ["..."] + self.title.split()[:4] 
