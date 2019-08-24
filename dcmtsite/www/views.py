@@ -41,7 +41,7 @@ def contacts(request):
 
 def researcher(request, researcher_slug):
     researcher = Person.objects.get(slug=researcher_slug)	
-    papers = Paper.objects.filter(dcmt_authors=researcher).reverse()
+    papers = Paper.objects.filter(dcmt_authors=researcher).order_by('-date')
     context = {'researcher_slug': researcher_slug, 'researcher': researcher, 'papers': papers }
     return render(request, 'researcher_card.html', context)
 
@@ -58,7 +58,7 @@ def publications_en(request):
     # year_oldest = 2000
     # year_cur = date.today().year
     # years = range(year_oldest, year_cur+1)
-    papers = Paper.objects.all().order_by('date');
+    papers = Paper.objects.all().order_by('-date');
     # articles = Paper.objects.filter(type='ART')
     # conf_procs = Paper.objects.filter(type='CPR')
     # monos = Paper.objects.filter(type='MNG')
@@ -87,7 +87,7 @@ def contacts_en(request):
 def researcher_en(request, researcher_slug):
     researcher = Person.objects.get(slug=researcher_slug)
     researcher_en = researcher.__str_en__()
-    papers = Paper.objects.filter(dcmt_authors=researcher)
+    papers = Paper.objects.filter(dcmt_authors=researcher).order_by('-date')
     context = {'researcher_slug': researcher_slug, 'researcher': researcher, 'researcher_en': researcher_en, 'papers': papers }
     return render(request, 'researcher_card_en.html', context)
 
