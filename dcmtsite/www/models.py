@@ -1,5 +1,5 @@
 from django.db import models
-import datetime as dt
+from django.utils import timezone
 
 
 class Person(models.Model):
@@ -29,7 +29,7 @@ class Person(models.Model):
         
 		
 class Paper(models.Model):
-    date = models.DateField(default=dt.date.today(), editable=True, blank=False)
+    date = models.DateField(default=timezone.now, editable=True, blank=False)
     authors = models.TextField(max_length=256) 
     title = models.TextField(max_length=256)
     journal = models.TextField(max_length=256, verbose_name='Journal, Volume, Pages etc.')
