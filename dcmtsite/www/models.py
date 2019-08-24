@@ -1,4 +1,5 @@
 from django.db import models
+from django import datetime as dt
 
 
 class Person(models.Model):
@@ -28,7 +29,7 @@ class Person(models.Model):
         
 		
 class Paper(models.Model):
-    date = models.DateField(auto_now_add=False, editable=True, blank=True)
+    date = models.DateField(default=dt.date.today(), editable=True, blank=False)
     authors = models.TextField(max_length=256) 
     title = models.TextField(max_length=256)
     journal = models.TextField(max_length=256, verbose_name='Journal, Volume, Pages etc.')
