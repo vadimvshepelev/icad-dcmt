@@ -29,7 +29,7 @@ class Person(models.Model):
         
 		
 class Paper(models.Model):
-    date = models.DateField(default=timezone.now, editable=True, blank=False)
+    date = models.DateField(default=timezone.now, editable=True, NULL=False, blank=False)
     authors = models.TextField(max_length=256) 
     title = models.TextField(max_length=256)
     journal = models.TextField(max_length=256, verbose_name='Journal, Volume, Pages etc.')
