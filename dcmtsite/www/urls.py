@@ -22,8 +22,8 @@ urlpatterns = [
 	url(r'^en/contacts/$', views.contacts_en, name='contacts_en'),
 	url(r'^en/people/$', views.people_en, name='people_en'),
 	url(r'^en/people/(?P<researcher_slug>[a-z]+)$', views.researcher_en), 
-	url(r'^robots.txt$', views.robots_txt),
-    #url(r'^robots.txt$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+	url(r'^robots.txt$', views.robots_txt),    
     url(r'^robots.txt$', django.views.static.serve, {'document_root': settings.STATIC_ROOT, 'path': "robots.txt"}),
+    url(r'^favicon.ico$', django.views.static.serve, {'document_root': settings.STATIC_ROOT, 'path': "favicon.ico"}),
     url(r'sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),    
 ]

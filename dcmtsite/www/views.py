@@ -92,6 +92,6 @@ def researcher_en(request, researcher_slug):
     return render(request, 'researcher_card_en.html', context)
 
 
-def robots_txt(request):
-	return render(request, 'robots.txt', content_type='text/plain')	
+#def robots_txt(request):
+#	return render(request, 'robots.txt', content_type='text/plain')	
     
