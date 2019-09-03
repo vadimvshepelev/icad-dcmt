@@ -2,7 +2,7 @@ from django.conf.urls import url
 from . import views
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import sitemaps
-from .dcmtsite import settings
+from ..dcmtsite import settings
 
 
 urlpatterns = [ 
