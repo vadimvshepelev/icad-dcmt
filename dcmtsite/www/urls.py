@@ -3,7 +3,7 @@ from . import views
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import sitemaps
 from django.conf import settings
-
+import django.views.static
 
 urlpatterns = [ 
     url(r'^$', views.index, name='main'),
@@ -24,6 +24,6 @@ urlpatterns = [
 	url(r'^en/people/(?P<researcher_slug>[a-z]+)$', views.researcher_en), 
 	url(r'^robots.txt$', views.robots_txt),
     #url(r'^robots.txt$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-    url(r'^robots.txt$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'path': "robots.txt"}),
+    url(r'^robots.txt$', django.views.static.serve, {'document_root': settings.STATIC_ROOT, 'path': "robots.txt"}),
     url(r'sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),    
 ]
