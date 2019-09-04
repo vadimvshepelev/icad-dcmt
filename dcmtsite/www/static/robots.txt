@@ -1,3 +1,4 @@
 User-agent: *
 Host: https://icad-dcmt.ru
+Disallow: http://icad-dcmt.ru
 Sitemap: https://icad-dcmt.ru/sitemap.xml
